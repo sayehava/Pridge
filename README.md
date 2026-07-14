@@ -362,16 +362,16 @@ https://github.com/sayehava/Pridge-Client
 
 | Feature | Server | Client |
 |---|:---:|:---:|
-| Shared-hosting friendly | ✅ | — |
-| SQLite storage | ✅ | — |
-| Admin web interface | ✅ | — |
+| Shared-hosting friendly | ✅ | N/A |
+| SQLite storage | ✅ | N/A |
+| Admin web interface | ✅ | N/A |
 | Endpoint tokens | ✅ | Uses endpoint assignments |
 | Client tokens | ✅ | ✅ |
 | Temporary bearer sessions | ✅ | ✅ |
-| Multiple server profiles | — | ✅ |
+| Multiple server profiles | N/A | ✅ |
 | Multiple printer mappings | Manages assignments | ✅ |
-| Background polling | — | ✅ |
-| Headless mode | — | ✅ |
+| Background polling | N/A | ✅ |
+| Headless mode | N/A | ✅ |
 | Heartbeat tracking | ✅ | ✅ |
 | Queue status tracking | ✅ | ✅ |
 | Reservation timeout recovery | ✅ | ✅ |
@@ -383,7 +383,7 @@ https://github.com/sayehava/Pridge-Client
 | Windows support | Browser/server side | ✅ |
 | macOS support | Browser/server side | ✅ |
 | Linux support | Browser/server side | ✅ |
-| Packaged standalone builds | — | ✅ |
+| Packaged standalone builds | N/A | ✅ |
 | Language-neutral protocol | ✅ | ✅ |
 
 ---
@@ -752,7 +752,7 @@ The first official Pridge integration connects Dolibarr's built-in **Receipt Pri
 
 This roadmap describes the direction of the ecosystem, not a binding release schedule.
 
-## Phase 1 — Core bridge
+## Phase 1: Core bridge
 
 - [x] Lightweight PHP server
 - [x] SQLite job storage
@@ -769,7 +769,7 @@ This roadmap describes the direction of the ecosystem, not a binding release sch
 - [x] Headless mode
 - [x] Standalone release-build documentation
 
-## Phase 2 — Distribution and usability
+## Phase 2: Distribution and usability
 
 - [ ] Broader packaged releases
 - [ ] Improved diagnostics
@@ -780,7 +780,7 @@ This roadmap describes the direction of the ecosystem, not a binding release sch
 - [ ] Expanded platform testing
 - [ ] Additional documentation and examples
 
-## Phase 3 — Integrations
+## Phase 3: Integrations
 
 - [ ] WooCommerce connector
 - [x] Dolibarr connector
@@ -790,7 +790,7 @@ This roadmap describes the direction of the ecosystem, not a binding release sch
 - [ ] Shipping-label workflows
 - [ ] Invoice and packing-slip workflows
 
-## Phase 4 — Virtual printing
+## Phase 4: Virtual printing
 
 - [ ] Windows virtual printer
 - [ ] macOS virtual printer
@@ -799,7 +799,7 @@ This roadmap describes the direction of the ecosystem, not a binding release sch
 - [ ] User-selectable remote queues
 - [ ] Native operating-system print-dialog integration
 
-## Phase 5 — Developer ecosystem
+## Phase 5: Developer ecosystem
 
 - [ ] Stable protocol reference
 - [ ] PHP SDK
@@ -811,7 +811,7 @@ This roadmap describes the direction of the ecosystem, not a binding release sch
 - [ ] Mock Pridge server
 - [ ] Community plugin directory
 
-## Phase 6 — Extended management
+## Phase 6: Extended management
 
 - [ ] Fleet overview
 - [ ] Remote diagnostics
