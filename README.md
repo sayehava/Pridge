@@ -225,6 +225,7 @@ sequenceDiagram
 |---|---|---|---|---|
 | [**Pridge Server**](https://github.com/sayehava/PrintBridge-Server) | Receives, authenticates, queues and tracks print jobs | PHP + SQLite | AGPL-3.0 | Active |
 | [**Pridge Client**](https://github.com/sayehava/PrintBridge-Client) | Connects remote queues to local printers | Python | GPL-3.0-or-later + additional terms | Active |
+| [**Pridge Dolibarr Endpoint**](https://github.com/sayehava/Pridge-Dolibarr-Endpoint) | Sends Dolibarr Receipt Printer and TakePOS ESC/POS output to Pridge without patching Dolibarr core | PHP | GPL-3.0-or-later + additional terms | Active |
 | **Pridge Index** | Central ecosystem directory and project landing page | Markdown | GPL-3.0-or-later + additional terms | You are here |
 | **Virtual Printer** | Operating-system printer that sends jobs to Pridge | Native platform components | To be announced | Planned |
 | **Integrations** | Connectors for shops, ERPs and business applications | Multiple | Per repository | Planned |
@@ -690,6 +691,26 @@ Pridge Ecosystem
 | [sayehava/PrintBridge-Server](https://github.com/sayehava/PrintBridge-Server) | PHP and SQLite print-job broker with administration, authentication, queues and client APIs |
 | [sayehava/PrintBridge-Client](https://github.com/sayehava/PrintBridge-Client) | Cross-platform desktop and headless bridge from Pridge servers to local printers |
 | [sayehava/Pridge](https://github.com/sayehava/Pridge) | Official ecosystem directory and landing page |
+| [sayehava/Pridge-Dolibarr-Endpoint](https://github.com/sayehava/Pridge-Dolibarr-Endpoint) | Dolibarr and TakePOS integration that forwards raw ESC/POS jobs through Pridge |
+
+## First official integration
+
+### 🧾 Pridge Dolibarr Endpoint
+
+[![Open Integration](https://img.shields.io/badge/Open-Pridge_Dolibarr_Endpoint-f97316?style=for-the-badge&logo=github)](https://github.com/sayehava/Pridge-Dolibarr-Endpoint)
+
+The first official Pridge integration connects Dolibarr's built-in **Receipt Printers** module and **TakePOS** to Pridge without patching Dolibarr core. It registers a `pridge://` stream wrapper, captures the raw ESC/POS byte stream produced by Dolibarr and submits it to the Pridge Server plugin API over HTTPS.
+
+- Reuses Dolibarr's existing printer configuration
+- Keeps the built-in Receipt Printers module enabled
+- Works with TakePOS
+- Supports server profiles and endpoint tokens
+- Sends raw ESC/POS bytes unchanged
+- Includes a bundled test receiver and recent-print diagnostics
+
+**Repository:** https://github.com/sayehava/Pridge-Dolibarr-Endpoint
+
+---
 
 ## Reserved for future growth
 
@@ -760,7 +781,7 @@ This roadmap describes the direction of the ecosystem, not a binding release sch
 ## Phase 3 — Integrations
 
 - [ ] WooCommerce connector
-- [ ] Dolibarr connector
+- [x] Dolibarr connector
 - [ ] Generic webhook module
 - [ ] POS examples
 - [ ] ERP examples
