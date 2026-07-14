@@ -108,6 +108,7 @@
       <nav class="nav" id="nav" aria-label="Primary navigation">
         <a href="#how">How it works</a>
         <a href="#repositories">Repositories</a>
+          <a href="#integrations">Integrations</a>
         <a href="#api">Endpoints</a>
         <a href="#docs">Docs</a>
         <button type="button" data-modal="aboutModal">About</button>
@@ -234,8 +235,8 @@
       <div class="container">
         <div class="section-heading reveal">
           <div>
-            <div class="kicker">Two repositories, one system</div>
-            <h2>Choose your side of the bridge</h2>
+            <div class="kicker">Core repositories, one ecosystem</div>
+            <h2>Explore the core of the bridge</h2>
           </div>
           <p class="section-lead">
             Host the queue almost anywhere, then install the client on the computer that can see your local printers.
@@ -287,6 +288,53 @@
           <div class="stat"><strong>11</strong><span>Documented API routes</span></div>
           <div class="stat"><strong>0</strong><span>Required cloud services</span></div>
           <div class="stat"><strong>∞</strong><span>Possible connectors</span></div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section" id="integrations">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <div class="kicker">Official integrations</div>
+            <h2>Pridge meets the software you already use</h2>
+          </div>
+          <p class="section-lead">The ecosystem starts with Dolibarr and TakePOS, with room prepared for shops, ERPs, POS systems and custom applications.</p>
+        </div>
+
+        <div class="repo-grid">
+          <article class="repo-card glass reveal">
+            <div class="repo-top">
+              <div class="repo-icon" aria-hidden="true">🧾</div>
+              <span class="repo-chip">FIRST INTEGRATION</span>
+            </div>
+            <h3><span class="word-pri">Pridge</span> <span class="word-dge">Dolibarr Endpoint</span></h3>
+            <p>Connect Dolibarr Receipt Printers and TakePOS to Pridge without patching Dolibarr core. Raw ESC/POS output is captured through a <code>pridge://</code> stream wrapper and forwarded to Pridge Server over HTTPS.</p>
+            <ul class="feature-list">
+              <li>Works with Dolibarr Receipt Printers and TakePOS</li>
+              <li>Keeps the built-in module enabled</li>
+              <li>Supports endpoint tokens and server profiles</li>
+              <li>Includes test receiver and print diagnostics</li>
+            </ul>
+            <div class="repo-actions">
+              <a class="button button-primary" href="https://github.com/sayehava/Pridge-Dolibarr-Endpoint" target="_blank" rel="noopener">Open integration repository</a>
+            </div>
+            <span class="arch-glow"></span>
+          </article>
+
+          <article class="repo-card glass reveal">
+            <div class="repo-top">
+              <div class="repo-icon" aria-hidden="true">＋</div>
+              <span class="repo-chip">EXPANDING</span>
+            </div>
+            <h3>More bridges are coming</h3>
+            <p>The repository structure is ready for WooCommerce, ERP, POS, SDK, driver and community integrations as the Pridge ecosystem grows.</p>
+            <div class="repo-actions">
+              <a class="button button-secondary" href="https://github.com/sayehava/Pridge#-ecosystem-roadmap" target="_blank" rel="noopener">Explore the roadmap</a>
+            </div>
+            <span class="arch-glow"></span>
+          </article>
         </div>
       </div>
     </section>
