@@ -826,20 +826,21 @@ This roadmap describes the direction of the ecosystem, not a binding release sch
 
 # 💡 Why Pridge instead of direct printing?
 
-Direct printing is often tied to a single machine, language or operating system.
+Direct printing is often tied to a specific machine, operating system, printer driver, or printing technology.
 
 Pridge introduces a stable boundary between the job producer and the printer executor.
 
 | Direct approach | Pridge approach |
 |---|---|
 | Application must know printer details | Application targets a logical endpoint |
-| Server must reach local network | Client initiates connection |
-| Browser print dialog interrupts workflow | Jobs are handled by the client |
-| Different systems require different printing code | Integrations use one HTTP protocol |
+| Application must handle drivers or RAW printer commands | Client handles local drivers, queues, and RAW printing |
+| Server must reach the local network | Client initiates the connection |
+| Browser print dialog interrupts workflows | Jobs are handled by the client |
+| Different systems require different printing code | Integrations use one HTTP(S) protocol |
 | Limited queue visibility | Server tracks job states |
 | Printer changes require application changes | Update the client mapping |
 | One application per printer setup | Multiple applications can share endpoints |
-| Difficult remote-office support | Offices run independently assigned clients |
+| Difficult remote-office support | Offices run independently with assigned clients |
 
 ---
 
