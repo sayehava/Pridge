@@ -1,6 +1,8 @@
 <div align="center">
 
-# 🌉 Pridge
+<img src="docs/assets/images/HeroORG.png" alt="Pridge" width="720">
+
+# Pridge
 
 ### One bridge between your software and every printer you control.
 
