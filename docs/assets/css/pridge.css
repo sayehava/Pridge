@@ -1405,9 +1405,9 @@
       .hero-visual { min-height: 400px; }
       .float-a { left: 8px; }
       .float-b { right: 8px; }
-      .repo-grid, .faq-grid, .try-grid { grid-template-columns: 1fr; }
+      .repo-grid, .faq-grid, .try-grid { grid-template-columns: minmax(0, 1fr); }
       .stats { grid-template-columns: repeat(2, 1fr); }
-      .api-grid { grid-template-columns: 1fr; }
+      .api-grid { grid-template-columns: minmax(0, 1fr); }
       .endpoint-list {
         display: flex;
         overflow-x: auto;
@@ -1418,7 +1418,7 @@
         min-width: 245px;
         margin: 0 5px 0 0;
       }
-      .docs-shell { grid-template-columns: 1fr; }
+      .docs-shell { grid-template-columns: minmax(0, 1fr); }
       .docs-side { border-right: 0; border-bottom: 1px solid var(--line); }
       .docs-nav { grid-template-columns: repeat(2, minmax(0,1fr)); }
       .cta-card { grid-template-columns: 1fr; padding: 32px; }
