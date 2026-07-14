@@ -1,0 +1,16 @@
+{
+  "name": "Pridge \u2014 Open-source remote printing bridge",
+  "short_name": "Pridge",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#05060c",
+  "theme_color": "#05060c",
+  "description": "Open-source bridge between web applications and local printers.",
+  "icons": [
+    {
+      "src": "assets/images/pridge-logo.webp",
+      "sizes": "any",
+      "type": "image/webp"
+    }
+  ]
+}
