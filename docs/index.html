@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#05060c">
-  <link rel="icon" href="assets/images/pridge-logo.webp" type="image/webp">
+  <link rel="icon" href="assets/images/IconBig.png" type="image/png">
   <meta name="color-scheme" content="dark">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 
@@ -15,8 +15,8 @@
 
   <link rel="canonical" href="https://sayehava.github.io/Pridge/">
   <meta property="og:url" content="https://sayehava.github.io/Pridge/">
-  <meta property="og:image" content="https://sayehava.github.io/Pridge/assets/images/hero-network.webp">
-  <meta name="twitter:image" content="https://sayehava.github.io/Pridge/assets/images/hero-network.webp">
+  <meta property="og:image" content="https://sayehava.github.io/Pridge/assets/images/HeroServer.png">
+  <meta name="twitter:image" content="https://sayehava.github.io/Pridge/assets/images/HeroServer.png">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Pridge — Web to printer, without the drama">
   <meta property="og:description" content="A lightweight open-source bridge between web applications, shared hosting and local printers.">
@@ -27,7 +27,7 @@
   <meta name="twitter:title" content="Pridge — Open-source remote printing bridge">
   <meta name="twitter:description" content="Send print jobs from the web to local office printers through a secure server and desktop client.">
 
-  <link rel="preload" as="image" href="assets/images/hero-network.webp">
+  <link rel="preload" as="image" href="assets/images/HeroServer.png">
 
   <script type="application/ld+json">
   {
@@ -46,13 +46,10 @@
           "url": "https://github.com/sayehava"
         },
         "isAccessibleForFree": true,
-        "license": [
-          "https://www.gnu.org/licenses/agpl-3.0.html",
-          "https://www.gnu.org/licenses/gpl-3.0.html"
-        ],
+        "license": "https://www.gnu.org/licenses/gpl-3.0.html",
         "codeRepository": [
-          "https://github.com/sayehava/PrintBridge-Server",
-          "https://github.com/sayehava/PrintBridge-Client"
+          "https://github.com/sayehava/Pridge-Server",
+          "https://github.com/sayehava/Pridge-Client"
         ]
       },
       {
@@ -103,7 +100,7 @@
   <header class="topbar">
     <div class="container topbar-inner">
       <a class="brand" href="#home" aria-label="Pridge home">
-        <span class="brand-icon"><img src="assets/images/pridge-logo.webp" alt="" width="54" height="48"></span>
+        <span class="brand-icon"><img src="assets/images/IconBig.png" alt="" width="50" height="50"></span>
         <span><span class="word-pri">Pri</span><span class="word-dge">dge</span></span>
         <span class="brand-mini">Print bridge</span>
       </a>
@@ -125,7 +122,7 @@
         <button class="icon-button" type="button" id="effectsToggle" title="Toggle visual effects" aria-label="Toggle visual effects">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v2m0 14v2M3 12h2m14 0h2M5.64 5.64l1.41 1.41m9.9 9.9 1.41 1.41M18.36 5.64l-1.41 1.41m-9.9 9.9-1.41 1.41" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/></svg>
         </button>
-        <a class="button button-small desktop-cta" href="https://github.com/sayehava/PrintBridge-Client/releases/latest" target="_blank" rel="noopener">
+        <a class="button button-small desktop-cta" href="https://github.com/sayehava/Pridge-Client/releases/latest" target="_blank" rel="noopener">
           Download client
         </a>
         <button class="icon-button menu-button" type="button" id="menuButton" aria-controls="nav" aria-expanded="false" aria-label="Toggle menu">
@@ -152,7 +149,7 @@
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
             <a class="button button-secondary" href="#api">Explore the API</a>
-            <a class="button button-secondary" href="https://github.com/sayehava" target="_blank" rel="noopener">
+            <a class="button button-secondary" href="https://github.com/sayehava/Pridge" target="_blank" rel="noopener">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.57-.29-5.27-1.29-5.27-5.72 0-1.27.45-2.3 1.19-3.11-.12-.29-.52-1.47.11-3.07 0 0 .97-.31 3.16 1.19a10.9 10.9 0 0 1 5.75 0c2.2-1.5 3.16-1.19 3.16-1.19.63 1.6.23 2.78.11 3.07.74.81 1.19 1.84 1.19 3.11 0 4.44-2.71 5.42-5.29 5.71.42.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
               GitHub
             </a>
@@ -250,7 +247,7 @@
           <article class="repo-card glass reveal">
             <div class="repo-top">
               <div class="repo-icon" aria-hidden="true">☁</div>
-              <span class="repo-chip">AGPL-3.0</span>
+              <span class="repo-chip">GPL-3.0 · additional terms</span>
             </div>
             <h3><span class="word-pri">Pridge</span> <span class="word-dge">Server</span></h3>
             <p>A plain PHP and SQLite print job broker made for shared hosting and simple self-hosting.</p>
@@ -261,8 +258,8 @@
               <li>Clean cPanel-friendly installation with protected storage</li>
             </ul>
             <div class="repo-actions">
-              <a class="button" href="https://github.com/sayehava/PrintBridge-Server" target="_blank" rel="noopener">Open server repository</a>
-              <a class="button button-secondary" href="https://github.com/sayehava/PrintBridge-Server/tree/main/docs" target="_blank" rel="noopener">Source docs</a>
+              <a class="button" href="https://github.com/sayehava/Pridge-Server" target="_blank" rel="noopener">Open server repository</a>
+              <a class="button button-secondary" href="https://github.com/sayehava/Pridge-Server/tree/main/docs" target="_blank" rel="noopener">Source docs</a>
             </div>
           </article>
 
@@ -280,8 +277,8 @@
               <li>Self-contained Native and PyInstaller release packages</li>
             </ul>
             <div class="repo-actions">
-              <a class="button" href="https://github.com/sayehava/PrintBridge-Client" target="_blank" rel="noopener">Open client repository</a>
-              <a class="button button-secondary" href="https://github.com/sayehava/PrintBridge-Client/releases/latest" target="_blank" rel="noopener">Latest release</a>
+              <a class="button" href="https://github.com/sayehava/Pridge-Client" target="_blank" rel="noopener">Open client repository</a>
+              <a class="button button-secondary" href="https://github.com/sayehava/Pridge-Client/releases/latest" target="_blank" rel="noopener">Latest release</a>
             </div>
           </article>
         </div>
@@ -544,7 +541,7 @@ storage/database/</pre></div>
               </div>
 
               <div class="doc-callout">Running from source is also supported with Python 3.9 or newer: <code>python3 -m pip install -e .</code></div>
-              <p><a class="button button-small" href="https://github.com/sayehava/PrintBridge-Client/releases/latest" target="_blank" rel="noopener">Open latest release</a></p>
+              <p><a class="button button-small" href="https://github.com/sayehava/Pridge-Client/releases/latest" target="_blank" rel="noopener">Open latest release</a></p>
             </article>
 
             <article class="doc-panel" data-doc-panel="connect">
@@ -583,7 +580,7 @@ RAW_PRINT_PAYLOAD_BYTES</pre></div>
                 <li>Metadata is optional JSON stored in the <code>X-PrintBridge-Metadata</code> header.</li>
               </ul>
 
-              <p><a class="button button-small button-secondary" href="https://github.com/sayehava/PrintBridge-Server/blob/main/docs/module-development.md" target="_blank" rel="noopener">Open the complete module guide</a></p>
+              <p><a class="button button-small button-secondary" href="https://github.com/sayehava/Pridge-Server/blob/main/docs/module-development.md" target="_blank" rel="noopener">Open the complete module guide</a></p>
             </article>
 
             <article class="doc-panel" data-doc-panel="agent-dev">
@@ -610,7 +607,7 @@ RAW_PRINT_PAYLOAD_BYTES</pre></div>
         mark_failed(job.id, safe_message(error))</pre></div>
 
               <p>The agent should never log full client tokens, session tokens, passwords or raw print payloads.</p>
-              <p><a class="button button-small button-secondary" href="https://github.com/sayehava/PrintBridge-Server/blob/main/docs/client-agent-development.md" target="_blank" rel="noopener">Open the complete client-agent guide</a></p>
+              <p><a class="button button-small button-secondary" href="https://github.com/sayehava/Pridge-Server/blob/main/docs/client-agent-development.md" target="_blank" rel="noopener">Open the complete client-agent guide</a></p>
             </article>
 
             <article class="doc-panel" data-doc-panel="security">
@@ -641,7 +638,7 @@ RAW_PRINT_PAYLOAD_BYTES</pre></div>
 
 # macOS
 bash scripts/build-macos.sh All --select-output-dir</pre></div>
-              <p><a class="button button-small button-secondary" href="https://github.com/sayehava/PrintBridge-Client/blob/main/BUILDING.md" target="_blank" rel="noopener">Open BUILDING.md</a></p>
+              <p><a class="button button-small button-secondary" href="https://github.com/sayehava/Pridge-Client/blob/main/BUILDING.md" target="_blank" rel="noopener">Open BUILDING.md</a></p>
             </article>
           </div>
         </div>
@@ -729,7 +726,7 @@ bash scripts/build-macos.sh All --select-output-dir</pre></div>
           </details>
           <details>
             <summary>Is Pridge open source?</summary>
-            <p>Yes. The server is AGPL-3.0 licensed. The client is GPL-3.0 licensed and includes additional terms in its repository.</p>
+            <p>Yes. The server and client are both GPL-3.0-or-later licensed, with additional terms in their repositories.</p>
           </details>
         </div>
       </div>
@@ -745,7 +742,7 @@ bash scripts/build-macos.sh All --select-output-dir</pre></div>
           </div>
           <div class="cta-actions">
             <button class="button button-orange" type="button" data-modal="quickStartModal">Quick start</button>
-            <a class="button button-secondary" href="https://github.com/sayehava/PrintBridge-Client/releases/latest" target="_blank" rel="noopener">Download client</a>
+            <a class="button button-secondary" href="https://github.com/sayehava/Pridge-Client/releases/latest" target="_blank" rel="noopener">Download client</a>
           </div>
         </div>
       </div>
@@ -762,8 +759,8 @@ bash scripts/build-macos.sh All --select-output-dir</pre></div>
       <div class="footer-links">
         <a href="#api">API</a>
         <a href="#docs">Docs</a>
-        <a href="https://github.com/sayehava/PrintBridge-Server" target="_blank" rel="noopener">Server</a>
-        <a href="https://github.com/sayehava/PrintBridge-Client" target="_blank" rel="noopener">Client</a>
+        <a href="https://github.com/sayehava/Pridge-Server" target="_blank" rel="noopener">Server</a>
+        <a href="https://github.com/sayehava/Pridge-Client" target="_blank" rel="noopener">Client</a>
         <button type="button" data-modal="aboutModal">About</button>
         <button type="button" data-modal="contactModal">Contact</button>
       </div>
@@ -788,15 +785,15 @@ bash scripts/build-macos.sh All --select-output-dir</pre></div>
   -H "Content-Type: text/plain" \
   --data-binary "Hello from Pridge"</pre></div>
       <div style="display:flex;gap:9px;flex-wrap:wrap;margin-top:18px">
-        <a class="button button-small" href="https://github.com/sayehava/PrintBridge-Server" target="_blank" rel="noopener">Get server</a>
-        <a class="button button-small button-secondary" href="https://github.com/sayehava/PrintBridge-Client/releases/latest" target="_blank" rel="noopener">Get client</a>
+        <a class="button button-small" href="https://github.com/sayehava/Pridge-Server" target="_blank" rel="noopener">Get server</a>
+        <a class="button button-small button-secondary" href="https://github.com/sayehava/Pridge-Client/releases/latest" target="_blank" rel="noopener">Get client</a>
       </div>
     </div>
   </dialog>
 
   <dialog id="aboutModal" aria-labelledby="aboutTitle">
     <div class="about-hero">
-      <div class="about-logo"><img src="assets/images/pridge-logo.webp" alt="" width="82" height="72"><span><span class="word-pri">Pri</span><span class="word-dge">dge</span></span></div>
+      <div class="about-logo"><img src="assets/images/IconBig.png" alt="" width="76" height="76"><span><span class="word-pri">Pri</span><span class="word-dge">dge</span></span></div>
     </div>
     <div class="modal-head">
       <strong id="aboutTitle">About Pridge</strong>
@@ -823,10 +820,10 @@ bash scripts/build-macos.sh All --select-output-dir</pre></div>
     </div>
     <div class="modal-body">
       <div class="contact-links">
-        <a class="contact-link" href="https://github.com/sayehava/PrintBridge-Server/issues" target="_blank" rel="noopener"><strong>Server issues</strong><span>Report a server bug</span></a>
-        <a class="contact-link" href="https://github.com/sayehava/PrintBridge-Client/issues" target="_blank" rel="noopener"><strong>Client issues</strong><span>Report a desktop bug</span></a>
-        <a class="contact-link" href="https://github.com/sayehava/PrintBridge-Server" target="_blank" rel="noopener"><strong>Server repo</strong><span>Source and documentation</span></a>
-        <a class="contact-link" href="https://github.com/sayehava/PrintBridge-Client" target="_blank" rel="noopener"><strong>Client repo</strong><span>Source and releases</span></a>
+        <a class="contact-link" href="https://github.com/sayehava/Pridge-Server/issues" target="_blank" rel="noopener"><strong>Server issues</strong><span>Report a server bug</span></a>
+        <a class="contact-link" href="https://github.com/sayehava/Pridge-Client/issues" target="_blank" rel="noopener"><strong>Client issues</strong><span>Report a desktop bug</span></a>
+        <a class="contact-link" href="https://github.com/sayehava/Pridge-Server" target="_blank" rel="noopener"><strong>Server repo</strong><span>Source and documentation</span></a>
+        <a class="contact-link" href="https://github.com/sayehava/Pridge-Client" target="_blank" rel="noopener"><strong>Client repo</strong><span>Source and releases</span></a>
       </div>
 
       <form class="contact-form" id="contactForm">

@@ -449,8 +449,8 @@
         {label:"Quick start", hint:"Modal", symbol:"⚡", action:() => $("#quickStartModal").showModal()},
         {label:"About Pridge", hint:"Modal", symbol:"i", action:() => $("#aboutModal").showModal()},
         {label:"Contact", hint:"Modal", symbol:"@", action:() => $("#contactModal").showModal()},
-        {label:"Server repository", hint:"GitHub", symbol:"☁", action:() => window.open("https://github.com/sayehava/PrintBridge-Server","_blank","noopener")},
-        {label:"Client repository", hint:"GitHub", symbol:"▣", action:() => window.open("https://github.com/sayehava/PrintBridge-Client","_blank","noopener")},
+        {label:"Server repository", hint:"GitHub", symbol:"☁", action:() => window.open("https://github.com/sayehava/Pridge-Server","_blank","noopener")},
+        {label:"Client repository", hint:"GitHub", symbol:"▣", action:() => window.open("https://github.com/sayehava/Pridge-Client","_blank","noopener")},
         ...Object.entries(endpoints).map(([key, data]) => ({
           label: `${data.method} ${data.path}`,
           hint: data.title,
