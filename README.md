@@ -9,14 +9,14 @@
 [![Pridge](https://img.shields.io/badge/Pridge-Printing%20Ecosystem-2563eb?style=for-the-badge&logo=printables&logoColor=white)](https://github.com/sayehava/Pridge)
 [![Open Source](https://img.shields.io/badge/Open%20Source-Yes-22c55e?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](https://github.com/sayehava/Pridge)
 [![Self Hosted](https://img.shields.io/badge/Self--Hosted-First-f97316?style=for-the-badge&logo=serverfault&logoColor=white)](https://github.com/sayehava/Pridge)
-[![Cross Platform](https://img.shields.io/badge/Windows%20%C2%B7%20macOS%20%C2%B7%20Linux-Ready-7c3aed?style=for-the-badge)](https://github.com/sayehava/PrintBridge-Client)
+[![Cross Platform](https://img.shields.io/badge/Windows%20%C2%B7%20macOS%20%C2%B7%20Linux-Ready-7c3aed?style=for-the-badge)](https://github.com/sayehava/Pridge-Client)
 
 <br>
 
-[![Pridge Server](https://img.shields.io/badge/Pridge_Server-PHP_%2B_SQLite-2563eb?style=flat-square&logo=php&logoColor=white)](https://github.com/sayehava/PrintBridge-Server)
-[![Pridge Client](https://img.shields.io/badge/Pridge_Client-Python-16a34a?style=flat-square&logo=python&logoColor=white)](https://github.com/sayehava/PrintBridge-Client)
-[![Server License](https://img.shields.io/badge/Server-AGPL--3.0-0f766e?style=flat-square)](https://github.com/sayehava/PrintBridge-Server/blob/main/LICENSE)
-[![Client License](https://img.shields.io/badge/Client-GPL--3.0--or--later-a21caf?style=flat-square)](https://github.com/sayehava/PrintBridge-Client/blob/main/LICENSE)
+[![Pridge Server](https://img.shields.io/badge/Pridge_Server-PHP_%2B_SQLite-2563eb?style=flat-square&logo=php&logoColor=white)](https://github.com/sayehava/Pridge-Server)
+[![Pridge Client](https://img.shields.io/badge/Pridge_Client-Python-16a34a?style=flat-square&logo=python&logoColor=white)](https://github.com/sayehava/Pridge-Client)
+[![Server License](https://img.shields.io/badge/Server-GPL--3.0--or--later-0f766e?style=flat-square)](https://github.com/sayehava/Pridge-Server/blob/main/LICENSE)
+[![Client License](https://img.shields.io/badge/Client-GPL--3.0--or--later-a21caf?style=flat-square)](https://github.com/sayehava/Pridge-Client/blob/main/LICENSE)
 [![Index License](https://img.shields.io/badge/This_Repository-GPL--3.0--or--later-d97706?style=flat-square)](LICENSE)
 
 <br>
@@ -223,8 +223,8 @@ sequenceDiagram
 
 | Project | Purpose | Technology | License | Status |
 |---|---|---|---|---|
-| [**Pridge Server**](https://github.com/sayehava/PrintBridge-Server) | Receives, authenticates, queues and tracks print jobs | PHP + SQLite | AGPL-3.0 | Active |
-| [**Pridge Client**](https://github.com/sayehava/PrintBridge-Client) | Connects remote queues to local printers | Python | GPL-3.0-or-later + additional terms | Active |
+| [**Pridge Server**](https://github.com/sayehava/Pridge-Server) | Receives, authenticates, queues and tracks print jobs | PHP + SQLite | GPL-3.0-or-later + additional terms | Active |
+| [**Pridge Client**](https://github.com/sayehava/Pridge-Client) | Connects remote queues to local printers | Python | GPL-3.0-or-later + additional terms | Active |
 | [**Pridge Dolibarr Endpoint**](https://github.com/sayehava/Pridge-Dolibarr-Endpoint) | Sends Dolibarr Receipt Printer and TakePOS ESC/POS output to Pridge without patching Dolibarr core | PHP | GPL-3.0-or-later + additional terms | Active |
 | **Pridge Index** | Central ecosystem directory and project landing page | Markdown | GPL-3.0-or-later + additional terms | You are here |
 | **Virtual Printer** | Operating-system printer that sends jobs to Pridge | Native platform components | To be announced | Planned |
@@ -237,7 +237,7 @@ sequenceDiagram
 
 # 🖥️ Pridge Server
 
-[![Open Repository](https://img.shields.io/badge/Open-Pridge_Server-2563eb?style=for-the-badge&logo=github)](https://github.com/sayehava/PrintBridge-Server)
+[![Open Repository](https://img.shields.io/badge/Open-Pridge_Server-2563eb?style=for-the-badge&logo=github)](https://github.com/sayehava/Pridge-Server)
 
 **Pridge Server** is the central print-job broker.
 
@@ -281,13 +281,13 @@ It is written in plain PHP and uses SQLite for storage. It is designed to run on
 ## Server repository
 
 **GitHub:**  
-https://github.com/sayehava/PrintBridge-Server
+https://github.com/sayehava/Pridge-Server
 
 ---
 
 # 💻 Pridge Client
 
-[![Open Repository](https://img.shields.io/badge/Open-Pridge_Client-16a34a?style=for-the-badge&logo=github)](https://github.com/sayehava/PrintBridge-Client)
+[![Open Repository](https://img.shields.io/badge/Open-Pridge_Client-16a34a?style=for-the-badge&logo=github)](https://github.com/sayehava/Pridge-Client)
 
 **Pridge Client** is the local bridge between Pridge Server and printers installed on a computer.
 
@@ -352,7 +352,7 @@ The project documents self-contained release builds using:
 ## Client repository
 
 **GitHub:**  
-https://github.com/sayehava/PrintBridge-Client
+https://github.com/sayehava/Pridge-Client
 
 ---
 
@@ -688,8 +688,8 @@ Pridge Ecosystem
 
 | Repository | Description |
 |---|---|
-| [sayehava/PrintBridge-Server](https://github.com/sayehava/PrintBridge-Server) | PHP and SQLite print-job broker with administration, authentication, queues and client APIs |
-| [sayehava/PrintBridge-Client](https://github.com/sayehava/PrintBridge-Client) | Cross-platform desktop and headless bridge from Pridge servers to local printers |
+| [sayehava/Pridge-Server](https://github.com/sayehava/Pridge-Server) | PHP and SQLite print-job broker with administration, authentication, queues and client APIs |
+| [sayehava/Pridge-Client](https://github.com/sayehava/Pridge-Client) | Cross-platform desktop and headless bridge from Pridge servers to local printers |
 | [sayehava/Pridge](https://github.com/sayehava/Pridge) | Official ecosystem directory and landing page |
 | [sayehava/Pridge-Dolibarr-Endpoint](https://github.com/sayehava/Pridge-Dolibarr-Endpoint) | Dolibarr and TakePOS integration that forwards raw ESC/POS jobs through Pridge |
 
@@ -1030,7 +1030,7 @@ A virtual printer is part of the planned ecosystem direction.
 <details>
 <summary><strong>Why are Server and Client in separate repositories?</strong></summary>
 
-They have different runtimes, deployment models, release cycles and licenses. Separate repositories keep development and distribution clean.
+They have different runtimes, deployment models and release cycles. Separate repositories keep development and distribution clean.
 
 </details>
 
@@ -1095,10 +1095,10 @@ Good pull requests should:
 Use the issue tracker of the affected component:
 
 - **Server bugs:**  
-  https://github.com/sayehava/PrintBridge-Server/issues
+  https://github.com/sayehava/Pridge-Server/issues
 
 - **Client bugs:**  
-  https://github.com/sayehava/PrintBridge-Client/issues
+  https://github.com/sayehava/Pridge-Client/issues
 
 - **Ecosystem/index issues:**  
   https://github.com/sayehava/Pridge/issues
@@ -1128,20 +1128,14 @@ Use the security reporting mechanism available in the affected repository, or co
 
 # 📜 Licensing
 
-The Pridge ecosystem contains independently licensed components.
+Every Pridge repository ships its own `LICENSE` file. All current components share the same terms.
 
 | Repository | License |
 |---|---|
-| Pridge Server | GNU Affero General Public License v3.0 |
+| Pridge Server | GNU General Public License v3.0 or later, with additional terms under GPLv3 Section 7 |
 | Pridge Client | GNU General Public License v3.0 or later, with additional terms under GPLv3 Section 7 |
 | Pridge index repository | GNU General Public License v3.0 or later, with additional terms under GPLv3 Section 7 |
 | Future projects | Specified in each repository |
-
-## Why the licenses differ
-
-The Server is network-facing software. Its AGPL license ensures that users interacting with a modified hosted version can receive the corresponding source code as required by the AGPL.
-
-The Client and this index repository use GPL-3.0-or-later with the additional attribution notice described below.
 
 Always check the `LICENSE` and `ADDITIONAL_TERMS.md` files in the specific repository you use.
 
@@ -1220,9 +1214,9 @@ You can help the project without writing code:
 
 [![Pridge Index](https://img.shields.io/badge/Pridge-Official_Index-111827?style=for-the-badge&logo=github)](https://github.com/sayehava/Pridge)
 
-[![Pridge Server](https://img.shields.io/badge/Pridge-Server-2563eb?style=for-the-badge&logo=php&logoColor=white)](https://github.com/sayehava/PrintBridge-Server)
+[![Pridge Server](https://img.shields.io/badge/Pridge-Server-2563eb?style=for-the-badge&logo=php&logoColor=white)](https://github.com/sayehava/Pridge-Server)
 
-[![Pridge Client](https://img.shields.io/badge/Pridge-Client-16a34a?style=for-the-badge&logo=python&logoColor=white)](https://github.com/sayehava/PrintBridge-Client)
+[![Pridge Client](https://img.shields.io/badge/Pridge-Client-16a34a?style=for-the-badge&logo=python&logoColor=white)](https://github.com/sayehava/Pridge-Client)
 
 </div>
 
