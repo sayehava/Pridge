@@ -17,5 +17,12 @@ Plain PHP server-rendered views (`views/*.php`) with one shared stylesheet (`ass
 
 ## Components worth reusing ideas from
 
+All of these are re-skinned with our own palette and shown live on [docs/design.html](https://sayehava.github.io/Pridge/design.html#server).
+
 - **`fadeUp` keyframe**: identical purpose to the docs site's own `fadeUp` - both fade + translateY(10-20px) on entrance. Good confirmation the two sites should keep sharing this kind of micro-interaction vocabulary once colors are unified.
-- Server-rendered admin views (queue table, endpoint list, client list) are a good reference if the docs site ever needs an "admin-style" data table pattern.
+- **Metric card** (`.metric`): a stat card with a big gradient-text number, hover-lift on the whole card - Server's own take on the docs site's `.stat`.
+- **Status pill** (`.status-pill`): a glowing rounded pill for a single system-wide status line.
+- **Notice** (`.notice`): a success-tinted callout box for post-action confirmations (e.g. "endpoint created, copy this token now").
+- **Data table** (`table` / `th` / `td` / row hover): the queue, client and endpoint list pattern - header row, hoverable rows, a `.badge` per status column.
+- **Pagination** (`.pagination`, `.pagination-nav`, `.pagination-size`): page-size selector plus prev/next nav, used under every table.
+- Admin topbar structurally mirrors the docs site's own (see [Layout](#layout) above).

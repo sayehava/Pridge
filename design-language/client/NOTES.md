@@ -20,5 +20,14 @@ Two of those themes (Moonstone, Obsidian) use purple/magenta accents. That's fin
 
 ## Components worth reusing ideas from
 
-- **Status card**: a small bordered card with an uppercase label + a value line (`.status-card-label` / `.status-card-value`) - a clean pattern for compact status displays, could inform a future "server status" widget on the docs site.
+All of these are re-skinned with our own palette and shown live on [docs/design.html](https://sayehava.github.io/Pridge/design.html#client).
+
+- **Status card**: a small bordered card with an uppercase label + a value line (`.status-card-label` / `.status-card-value`) - a clean pattern for compact status displays.
 - **Gradient text title**: `.sidebar-title` uses the same `linear-gradient` + `background-clip: text` trick the docs site's `h1` and stat numbers use.
+- **Theme picker** (`.stone-options` / `.stone-option` / `.stone-swatch`): the actual gemstone-theme selector UI - a swatch + label grid with a ring-highlighted selected state. Directly ties to the `--client-*` tokens in the site palette.
+- **Server item card** (`.server-item`): a connection-profile card (name, URL, meta badges, action buttons), with pagination (`.server-pagination`) for long lists.
+- **Mapping row** (`.mapping-row` / `.mapping-active`): an endpoint-to-printer row with a highlighted active state.
+- **Settings row** (`.setting-row` / `.setting-copy`): a label + description + control list item, used throughout `settings.html`.
+- **Connection result** (`.success-result` / `.error-result`): a small inline alert for pass/fail feedback after testing a connection.
+- **Confirm modal** (`.confirm-modal`): a branded confirmation dialog (icon + copy + actions), used instead of a native browser confirm.
+- **Badge** (`.badge` / `.badge-active`): a simple pill for counts and short labels.
