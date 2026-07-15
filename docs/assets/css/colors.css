@@ -62,6 +62,19 @@
   --amber-vivid: #ebd000;
   --amber-pale: #faf4d4;
 
+  /*
+    Pridge Client accent reference - the desktop app's theme names and
+    accent colors (src/printbridge_client/webui/styles.css), kept here
+    for cross-project awareness. Not used in any site gradient or fill;
+    see design-language/client/NOTES.md.
+  */
+  --client-onyx: #4f8cff;
+  --client-quartz: #67e8f9;
+  --client-moonstone: #a78bfa;
+  --client-labradorite: #2dd4bf;
+  --client-obsidian: #d946ef;
+  --client-jet: #e2b96b;
+
   /* Soft translucent tints, used for badges/glows/hover fills */
   --pridge-blue-soft: rgba(34, 211, 238, .13);
   --pridge-blue-deep-soft: rgba(35, 135, 255, .13);

@@ -59,6 +59,23 @@ The site stays dark-mode only; these neutrals never change with the brand palett
 
 ---
 
+## Cross-project accents (Pridge Client)
+
+[Pridge Client](https://github.com/sayehava/Pridge-Client)'s desktop app ships six named themes, each with its own accent color. They're kept here for reference (not blended into any site gradient or fill):
+
+| Swatch | Theme | Token | Hex |
+|---|---|---|---|
+| ![#4F8CFF](https://img.shields.io/badge/-4F8CFF?style=flat-square&color=4F8CFF) | Onyx (default) | `--client-onyx` | `#4F8CFF` |
+| ![#67E8F9](https://img.shields.io/badge/-67E8F9?style=flat-square&color=67E8F9) | Quartz | `--client-quartz` | `#67E8F9` |
+| ![#A78BFA](https://img.shields.io/badge/-A78BFA?style=flat-square&color=A78BFA) | Moonstone | `--client-moonstone` | `#A78BFA` |
+| ![#2DD4BF](https://img.shields.io/badge/-2DD4BF?style=flat-square&color=2DD4BF) | Labradorite | `--client-labradorite` | `#2DD4BF` |
+| ![#D946EF](https://img.shields.io/badge/-D946EF?style=flat-square&color=D946EF) | Obsidian | `--client-obsidian` | `#D946EF` |
+| ![#E2B96B](https://img.shields.io/badge/-E2B96B?style=flat-square&color=E2B96B) | Jet | `--client-jet` | `#E2B96B` |
+
+Pridge Server's admin UI has its own accent set too, but those will be updated to match this palette later rather than cross-referenced now.
+
+---
+
 ## Sources
 
 This palette is inspired by two references for classic "Persian color" naming:
