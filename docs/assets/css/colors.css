@@ -5,10 +5,12 @@
   editing the tokens below; component styles never hardcode a hex value.
 
   Brand family: Pridge Blue (existing brand accent) plus a curated
-  Persian jewel-tone scale (Persian Blue, Persian Red, Persian Green,
-  Amber), inspired by:
+  Persian jewel-tone scale (Persian Blue, Persian Teal, Persian Red,
+  Persian Green, Amber), inspired by:
     https://github.com/alijsh/persian-colors/blob/master/persian-colors.css
     https://www.color-hex.com/color-palette/372
+    https://www.color-hex.com/color-palette/41105
+    https://www.color-hex.com/color-palette/61780
 */
 :root {
   /* Neutrals (dark theme) */
@@ -32,19 +34,33 @@
   --persian-blue: #1c39bb;
   --persian-blue-deep: #0067a5;
   --persian-blue-cobalt: #0047ab;
+  --persian-blue-navy: #0a0d82;
   --persian-blue-sky: #bcd4e6;
   --persian-blue-muted: #91a3b0;
 
-  /* Persian Red - persian-red-vivid */
-  --persian-red: #cc3333;
+  /* Persian Teal - bridges Persian Blue and Persian Green */
+  --persian-teal: #44a9b5;
+  --persian-teal-deep: #005d5d;
 
-  /* Persian Green - persian-green-brilliant-bluish / moderate-bluish */
+  /* Persian Red - a deeper range alongside the vivid primary */
+  --persian-red: #cc3333;
+  --persian-red-deep: #9e1b1b;
+  --persian-red-dark: #5d0000;
+
+  /* Persian Green - persian-green-brilliant-bluish / moderate-bluish, plus vivid, olive and forest shades */
   --persian-green: #00a693;
   --persian-green-deep: #317873;
+  --persian-green-vivid: #3cab3b;
+  --persian-green-olive: #71a559;
+  --persian-green-forest: #1c5125;
 
-  /* Amber */
+  /* Amber - warm gold range */
   --amber: #ffb300;
   --amber-deep: #f38400;
+  --amber-burnt: #ba711f;
+  --amber-gold: #bc9f37;
+  --amber-vivid: #ebd000;
+  --amber-pale: #faf4d4;
 
   /* Soft translucent tints, used for badges/glows/hover fills */
   --pridge-blue-soft: rgba(34, 211, 238, .13);
