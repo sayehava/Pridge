@@ -407,17 +407,6 @@
       });
       $("#tryRoute").addEventListener("change", buildRequest);
 
-      // Contact mailto
-      $("#contactForm").addEventListener("submit", event => {
-        event.preventDefault();
-        const name = $("#contactName").value.trim();
-        const email = $("#contactEmail").value.trim();
-        const message = $("#contactMessage").value.trim();
-        const subject = encodeURIComponent("Pridge website contact");
-        const body = encodeURIComponent(`Name: ${name || "-"}\nEmail: ${email || "-"}\n\n${message}`);
-        window.location.href = `mailto:john@doe.com?subject=${subject}&body=${body}`;
-      });
-
       // Effects toggle
       $("#effectsToggle").addEventListener("click", () => {
         const off = document.body.classList.toggle("effects-off");
@@ -448,7 +437,7 @@
         {label:"Documentation", hint:"Section", symbol:"?", action:() => location.hash = "docs"},
         {label:"Quick start", hint:"Modal", symbol:"⚡", action:() => $("#quickStartModal").showModal()},
         {label:"About Pridge", hint:"Modal", symbol:"i", action:() => $("#aboutModal").showModal()},
-        {label:"Contact", hint:"Modal", symbol:"@", action:() => $("#contactModal").showModal()},
+        {label:"Design language", hint:"Page", symbol:"◆", action:() => location.href = "design.html"},
         {label:"Server repository", hint:"GitHub", symbol:"☁", action:() => window.open("https://github.com/sayehava/Pridge-Server","_blank","noopener")},
         {label:"Client repository", hint:"GitHub", symbol:"▣", action:() => window.open("https://github.com/sayehava/Pridge-Client","_blank","noopener")},
         ...Object.entries(endpoints).map(([key, data]) => ({

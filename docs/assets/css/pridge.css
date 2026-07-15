@@ -853,8 +853,6 @@
     }
     .api-search input,
     .doc-search input,
-    .contact-form input,
-    .contact-form textarea,
     .try-form input,
     .try-form select {
       width: 100%;
@@ -868,8 +866,6 @@
     }
     .api-search input:focus,
     .doc-search input:focus,
-    .contact-form input:focus,
-    .contact-form textarea:focus,
     .try-form input:focus,
     .try-form select:focus {
       border-color: var(--blue);
@@ -1291,27 +1287,6 @@
     }
     .about-logo img { width: 82px; filter: drop-shadow(0 12px 20px rgba(0,0,0,.45)); }
 
-    .contact-form {
-      display: grid;
-      gap: 13px;
-    }
-    .contact-form label {
-      display: grid;
-      gap: 6px;
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 750;
-    }
-    .contact-form textarea { min-height: 140px; resize: vertical; }
-    .contact-links { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 20px; }
-    .contact-link {
-      display: flex; align-items: center; gap: 10px;
-      padding: 13px; border: 1px solid var(--line); border-radius: 12px;
-      background: rgba(255,255,255,.025); text-decoration: none;
-    }
-    .contact-link:hover { border-color: var(--line-strong); background: rgba(255,255,255,.04); }
-    .contact-link span { color: var(--muted); font-size: 12px; }
-
     .command-dialog { width: min(650px, calc(100% - 24px)); margin-top: 10vh; }
     .command-input {
       width: 100%;
@@ -1455,7 +1430,6 @@
       .endpoint-heading { flex-direction: column; }
       .docs-nav { grid-template-columns: 1fr; }
       .docs-content { padding: 25px 17px; }
-      .contact-links { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
       .cta-card { padding: 26px 21px; }
       .modal-body { padding: 18px; }
