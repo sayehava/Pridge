@@ -49,6 +49,7 @@
 - [What is Pridge?](#-what-is-pridge)
 - [The problem Pridge solves](#-the-problem-pridge-solves)
 - [Design principles](#-design-principles)
+- [Color palette](#-color-palette)
 - [How Pridge works](#-how-pridge-works)
 - [Official Pridge projects](#-official-pridge-projects)
 - [Pridge Server](#️-pridge-server)
@@ -160,6 +161,14 @@ Future drivers, plugins, integrations and alternative clients can reuse the same
 ## ❤️ Open source
 
 The ecosystem is built in public so users can inspect it, extend it, self-host it and contribute improvements.
+
+---
+
+# 🎨 Color palette
+
+The [landing page](https://sayehava.github.io/Pridge/) is themed with Pridge Blue and a curated Persian jewel-tone palette — Persian Blue, Persian Red, Persian Green and Amber.
+
+Full swatch previews, hex values and the CSS tokens behind them live in **[COLORS.md](COLORS.md)**, which also credits the [alijsh/persian-colors](https://github.com/alijsh/persian-colors/blob/master/persian-colors.css) and [color-hex.com/color-palette/372](https://www.color-hex.com/color-palette/372) references the palette draws on.
 
 ---
 
