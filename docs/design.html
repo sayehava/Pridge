@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#05060c">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" href="assets/images/IconBig.png" type="image/png">
+  <title>Pridge Design Language</title>
+  <meta name="description" content="An overview of Pridge's design language: color palette, button effects, site elements, and how Pridge Client and Pridge Server fit in.">
+  <link rel="canonical" href="https://sayehava.github.io/Pridge/design.html">
+  <link rel="stylesheet" href="assets/css/colors.css">
+  <link rel="stylesheet" href="assets/css/pridge.css">
+  <link rel="stylesheet" href="assets/css/buttons.css">
+  <style>
+    .dl-hero { padding: 54px 0 20px; }
+    .dl-hero p { max-width: 720px; color: var(--muted); font-size: 1.05rem; line-height: 1.7; }
+    .dl-back { display: inline-flex; align-items: center; gap: 6px; margin-bottom: 18px; color: var(--muted); font-size: 13px; font-weight: 700; text-decoration: none; }
+    .dl-back:hover { color: var(--text); }
+    .dl-section { padding: 40px 0; border-top: 1px solid var(--line); }
+    .dl-section > .container > h2 { margin-bottom: 6px; }
+    .dl-section > .container > p.lead { color: var(--muted); margin-bottom: 28px; max-width: 700px; }
+    .dl-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
+    .dl-swatch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+    .dl-swatch {
+      border: 1px solid var(--line); border-radius: 12px; overflow: hidden;
+      background: var(--panel-solid);
+    }
+    .dl-swatch-color { height: 56px; }
+    .dl-swatch-label { padding: 8px 10px; }
+    .dl-swatch-label strong { display: block; font-size: 12.5px; }
+    .dl-swatch-label small { color: var(--muted); font-size: 11px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .dl-card { padding: 22px; border-radius: var(--radius-lg); }
+    .dl-preview { min-height: 130px; display: grid; place-items: center; padding: 20px; border-radius: var(--radius-md); background: rgba(255,255,255,.02); margin-bottom: 12px; }
+    .dl-card h3 { font-size: 15px; margin-bottom: 4px; }
+    .dl-card p { color: var(--muted); font-size: 13px; margin: 0; }
+    .dl-flow { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    .dl-repo-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; font-size: 13px; font-weight: 700; color: var(--pridge-blue); text-decoration: none; }
+    .dl-repo-link:hover { text-decoration: underline; }
+    .dl-note { margin-top: 14px; padding: 12px 14px; border-radius: 10px; background: rgba(255,179,0,.06); border: 1px solid var(--amber-soft); color: var(--muted); font-size: 13px; }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html" aria-label="Pridge home">
+        <span class="brand-icon"><img src="assets/images/IconBig.png" alt="" width="50" height="50"></span>
+        <span><span class="word-pri">Pri</span><span class="word-dge">dge</span></span>
+        <span class="brand-mini">Design language</span>
+      </a>
+      <nav class="nav" style="flex:1;justify-content:flex-end">
+        <a href="index.html">&larr; Back to site</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="dl-hero">
+      <div class="container">
+        <div class="motif-tag"><span class="motif-star" aria-hidden="true"></span> Colors &middot; buttons &middot; site elements &middot; client &middot; server</div>
+        <h1 style="font-size:clamp(34px,5vw,58px);letter-spacing:-.045em;margin-bottom:14px">
+          <span class="gradient-title">Pridge design language</span>
+        </h1>
+        <p>An overview of everything visual across the Pridge ecosystem: this site's color palette and components, the 18 button effects available, and how <a href="https://github.com/sayehava/Pridge-Client" style="color:var(--pridge-blue)">Pridge Client</a> and <a href="https://github.com/sayehava/Pridge-Server" style="color:var(--pridge-blue)">Pridge Server</a> fit into the same family.</p>
+      </div>
+    </section>
+
+    <section class="dl-section" id="colors">
+      <div class="container">
+        <div class="kicker">Palette</div>
+        <h2>Colors</h2>
+        <p class="lead">Pridge Blue plus a curated Persian jewel-tone scale. Full hex values and sources: <a href="https://github.com/sayehava/Pridge/blob/main/COLORS.md" target="_blank" rel="noopener" style="color:var(--pridge-blue)">COLORS.md</a>.</p>
+        <div class="dl-swatch-grid" style="margin-bottom:22px">
+          <div class="dl-swatch"><div class="dl-swatch-color" style="background:var(--pridge-blue)"></div><div class="dl-swatch-label"><strong>Pridge Blue</strong><small>--pridge-blue</small></div></div>
+          <div class="dl-swatch"><div class="dl-swatch-color" style="background:var(--persian-blue)"></div><div class="dl-swatch-label"><strong>Persian Blue</strong><small>--persian-blue</small></div></div>
+          <div class="dl-swatch"><div class="dl-swatch-color" style="background:var(--persian-red)"></div><div class="dl-swatch-label"><strong>Persian Red</strong><small>--persian-red</small></div></div>
+          <div class="dl-swatch"><div class="dl-swatch-color" style="background:var(--persian-green)"></div><div class="dl-swatch-label"><strong>Persian Green</strong><small>--persian-green</small></div></div>
+          <div class="dl-swatch"><div class="dl-swatch-color" style="background:var(--amber)"></div><div class="dl-swatch-label"><strong>Amber</strong><small>--amber</small></div></div>
+        </div>
+        <div class="dl-swatch-grid">
+          <div class="dl-swatch"><div class="dl-swatch-color" style="background:var(--pridge-blue-deep)"></div><div class="dl-swatch-label"><strong>Pridge Blue Deep</strong><small>--pridge-blue-deep</small></div></div>
+          <div class="dl-swatch"><div class="dl-swatch-color" style="background:var(--persian-blue-cobalt)"></div><div class="dl-swatch-label"><strong>Persian Blue Cobalt</strong><small>--persian-blue-cobalt</small></div></div>
+          <div class="dl-swatch"><div class="dl-swatch-color" style="background:var(--persian-blue-navy)"></div><div class="dl-swatch-label"><strong>Persian Blue Navy</strong><small>--persian-blue-navy</small></div></div>
+          <div class="dl-swatch"><div class="dl-swatch-color" style="background:var(--persian-teal)"></div><div class="dl-swatch-label"><strong>Persian Teal</strong><small>--persian-teal</small></div></div>
+          <div class="dl-swatch"><div class="dl-swatch-color" style="background:var(--persian-green-vivid)"></div><div class="dl-swatch-label"><strong>Persian Green Vivid</strong><small>--persian-green-vivid</small></div></div>
+          <div class="dl-swatch"><div class="dl-swatch-color" style="background:var(--persian-red-deep)"></div><div class="dl-swatch-label"><strong>Persian Red Deep</strong><small>--persian-red-deep</small></div></div>
+          <div class="dl-swatch"><div class="dl-swatch-color" style="background:var(--amber-gold)"></div><div class="dl-swatch-label"><strong>Amber Gold</strong><small>--amber-gold</small></div></div>
+          <div class="dl-swatch"><div class="dl-swatch-color" style="background:var(--amber-vivid)"></div><div class="dl-swatch-label"><strong>Amber Vivid</strong><small>--amber-vivid</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dl-section" id="buttons">
+      <div class="container">
+        <div class="kicker">Interaction</div>
+        <h2>Buttons</h2>
+        <p class="lead">18 hover/tap-friendly CSS button effects. <strong style="color:var(--text)">Ripple Rings</strong> is the one used live on this site's own buttons. Notes on each: <a href="https://github.com/sayehava/Pridge/blob/main/design-language/buttons/BUTTONS.md" target="_blank" rel="noopener" style="color:var(--pridge-blue)">BUTTONS.md</a>.</p>
+        <div class="dl-grid">
+          <div class="dl-card glass"><div class="dl-preview"><button class="fx-btn fx-reflection"><span class="icon">&#8599;</span>Get started</button></div><h3>Reflection Sweep</h3><p>Automatic glossy reflection</p></div>
+          <div class="dl-card glass"><div class="dl-preview"><button class="fx-btn fx-neon">Connect client</button></div><h3>Neon Pulse</h3><p>Idle glow + solid hover</p></div>
+          <div class="dl-card glass"><div class="dl-preview"><button class="fx-btn fx-shift">Explore API</button></div><h3>Gradient Shift</h3><p>Continuous color flow</p></div>
+          <div class="dl-card glass"><div class="dl-preview"><button class="fx-btn fx-runner">Open repository</button></div><h3>Border Runner</h3><p>Animated conic border</p></div>
+          <div class="dl-card glass"><div class="dl-preview"><button class="fx-btn fx-liquid">Deploy server</button></div><h3>Liquid Fill</h3><p>Fluid hover transition</p></div>
+          <div class="dl-card glass"><div class="dl-preview"><button class="fx-btn fx-magnetic">Download client</button></div><h3>Magnetic Lift</h3><p>Depth and hover shadow</p></div>
+          <div class="dl-card glass"><div class="dl-preview"><button class="fx-btn fx-split">Quick start</button></div><h3>Split Reveal</h3><p>Panels open on hover</p></div>
+          <div class="dl-card glass"><div class="dl-preview"><button class="fx-btn fx-scan">Run diagnostics</button></div><h3>Scanner Line</h3><p>Technical HUD feel</p></div>
+          <div class="dl-card glass"><div class="dl-preview"><button class="fx-btn fx-glitch">View endpoint</button></div><h3>Pixel Glitch</h3><p>Hover-only distortion</p></div>
+          <div class="dl-card glass"><div class="dl-preview"><button class="fx-btn fx-ripple">Send print job</button></div><h3>Ripple Rings</h3><p>Signal broadcast &mdash; used live</p></div>
+          <div class="dl-card glass"><div class="dl-preview"><button class="fx-btn fx-stars">View ecosystem</button></div><h3>Data Sparkles</h3><p>Moving particle grid</p></div>
+          <div class="dl-card glass"><div class="dl-preview"><button class="fx-btn fx-corners">Read the docs</button></div><h3>Corner Brackets</h3><p>Minimal cyber frame</p></div>
+          <div class="dl-card glass"><div class="dl-preview"><button class="fx-btn fx-glass">Open dashboard</button></div><h3>Glass Prism</h3><p>Subtle rotating spectrum</p></div>
+          <div class="dl-card glass"><div class="dl-preview"><button class="fx-btn fx-charge">Start worker</button></div><h3>Energy Charge</h3><p>Left-to-right power fill</p></div>
+          <div class="dl-card glass"><div class="dl-preview"><button class="fx-btn fx-swap"><span class="front">View details</span><span class="back">Open now &#8599;</span></button></div><h3>Text Swap</h3><p>Secondary action reveal</p></div>
+          <div class="dl-card glass"><div class="dl-preview"><button class="fx-btn fx-orb">Server online</button></div><h3>Status Orb</h3><p>Live connection indicator</p></div>
+          <div class="dl-card glass"><div class="dl-preview"><button class="fx-btn fx-arrow">Download</button></div><h3>Arrow Launch</h3><p>Clear directional motion</p></div>
+          <div class="dl-card glass"><div class="dl-preview"><button class="fx-btn fx-holo">Discover Pridge</button></div><h3>Holographic</h3><p>Multi-tone interface sheen</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dl-section" id="elements">
+      <div class="container">
+        <div class="kicker">Components</div>
+        <h2>Site elements</h2>
+        <p class="lead">Reusable pieces from this site itself, live-rendered with their real styles. Full catalog: <a href="https://github.com/sayehava/Pridge/blob/main/design-language/elements/NOTES.md" target="_blank" rel="noopener" style="color:var(--pridge-blue)">elements/NOTES.md</a>.</p>
+        <div class="dl-grid">
+          <div class="dl-card glass"><div class="dl-preview"><div class="motif-tag"><span class="motif-star" aria-hidden="true"></span> Open source</div></div><h3>Persian star motif</h3><p>.motif-tag / .motif-star</p></div>
+
+          <div class="dl-card glass"><div class="dl-preview" style="flex-direction:column;align-items:flex-start;display:grid;justify-items:start"><div class="kicker">Section label</div></div><h3>Kicker</h3><p>.kicker</p></div>
+
+          <div class="dl-card glass" style="position:relative;overflow:hidden">
+            <div class="dl-preview">
+              <article class="arch-card" style="min-height:0;padding:16px;width:100%">
+                <span class="arch-number">01</span>
+                <h3 style="margin:10px 0 4px">Card title</h3>
+                <p style="font-size:13px">Card copy goes here.</p>
+                <span class="arch-glow"></span>
+              </article>
+            </div>
+            <h3>Architecture card</h3><p>.arch-card / .arch-glow</p>
+          </div>
+
+          <div class="dl-card glass"><div class="dl-preview"><div class="lifecycle" style="padding:10px"><span class="life pending">pending</span><span class="life-arrow">&rarr;</span><span class="life printed">printed</span></div></div><h3>Lifecycle badges</h3><p>.life.pending / .life.printed / .life.failed</p></div>
+
+          <div class="dl-card glass"><div class="dl-preview" style="width:100%"><button class="endpoint-item active" type="button" style="width:100%"><span class="method post">POST</span><span class="endpoint-path">/api/plugin/jobs</span></button></div><h3>Endpoint item</h3><p>.endpoint-item / .method</p></div>
+
+          <div class="dl-card glass"><div class="dl-preview"><button class="doc-link active" type="button" style="width:100%"><span>Overview</span><span>01</span></button></div><h3>Doc link</h3><p>.doc-link</p></div>
+
+          <div class="dl-card glass"><div class="dl-preview"><div class="toast">Copied to clipboard</div></div><h3>Toast</h3><p>.toast</p></div>
+
+          <div class="dl-card glass"><div class="dl-preview"><div class="code-panel" style="width:100%;margin:0"><div class="code-head"><span>Example</span></div><pre>curl -X POST "https://print.example.com/api/plugin/jobs"</pre></div></div><h3>Code panel</h3><p>.code-panel</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dl-section" id="client">
+      <div class="container">
+        <div class="kicker">Cross-project</div>
+        <h2>Pridge Client</h2>
+        <p class="lead">The desktop bridge: a compact pywebview app with six named dark themes. Its accent colors are cross-referenced in this site's palette, not blended into any gradient here.</p>
+        <div class="dl-swatch-grid">
+          <div class="dl-swatch"><div class="dl-swatch-color" style="background:var(--client-onyx)"></div><div class="dl-swatch-label"><strong>Onyx</strong><small>default theme</small></div></div>
+          <div class="dl-swatch"><div class="dl-swatch-color" style="background:var(--client-quartz)"></div><div class="dl-swatch-label"><strong>Quartz</strong><small>--client-quartz</small></div></div>
+          <div class="dl-swatch"><div class="dl-swatch-color" style="background:var(--client-moonstone)"></div><div class="dl-swatch-label"><strong>Moonstone</strong><small>--client-moonstone</small></div></div>
+          <div class="dl-swatch"><div class="dl-swatch-color" style="background:var(--client-labradorite)"></div><div class="dl-swatch-label"><strong>Labradorite</strong><small>--client-labradorite</small></div></div>
+          <div class="dl-swatch"><div class="dl-swatch-color" style="background:var(--client-obsidian)"></div><div class="dl-swatch-label"><strong>Obsidian</strong><small>--client-obsidian</small></div></div>
+          <div class="dl-swatch"><div class="dl-swatch-color" style="background:var(--client-jet)"></div><div class="dl-swatch-label"><strong>Jet</strong><small>--client-jet</small></div></div>
+        </div>
+        <a class="dl-repo-link" href="https://github.com/sayehava/Pridge-Client" target="_blank" rel="noopener">Pridge Client on GitHub &#8599;</a>
+      </div>
+    </section>
+
+    <section class="dl-section" id="server">
+      <div class="container">
+        <div class="kicker">Cross-project</div>
+        <h2>Pridge Server</h2>
+        <p class="lead">The PHP + SQLite admin dashboard. Same layout instincts as this site (sticky blurred topbar, card-based views) but its own palette, shown below as-is.</p>
+        <div class="dl-swatch-grid">
+          <div class="dl-swatch"><div class="dl-swatch-color" style="background:#22d3ee"></div><div class="dl-swatch-label"><strong>Accent</strong><small>current Server admin UI</small></div></div>
+          <div class="dl-swatch"><div class="dl-swatch-color" style="background:#a855f7"></div><div class="dl-swatch-label"><strong>Accent 2</strong><small>current Server admin UI</small></div></div>
+          <div class="dl-swatch"><div class="dl-swatch-color" style="background:#ff5d7a"></div><div class="dl-swatch-label"><strong>Danger</strong><small>current Server admin UI</small></div></div>
+          <div class="dl-swatch"><div class="dl-swatch-color" style="background:#34e2a0"></div><div class="dl-swatch-label"><strong>Success</strong><small>current Server admin UI</small></div></div>
+          <div class="dl-swatch"><div class="dl-swatch-color" style="background:#fbbf24"></div><div class="dl-swatch-label"><strong>Warning</strong><small>current Server admin UI</small></div></div>
+        </div>
+        <div class="dl-note">Server's admin UI still uses the site's pre-redesign palette. It's scheduled to be brought in line with the Persian palette above as a separate task, so it isn't cross-referenced as a live token set yet.</div>
+        <a class="dl-repo-link" href="https://github.com/sayehava/Pridge-Server" target="_blank" rel="noopener">Pridge Server on GitHub &#8599;</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <strong><span class="word-pri">Pri</span><span class="word-dge">dge</span></strong>
+        <span>: Design language overview.</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="https://github.com/sayehava/Pridge/blob/main/design-language/README.md" target="_blank" rel="noopener">design-language/</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

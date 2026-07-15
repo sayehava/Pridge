@@ -1,8 +1,8 @@
 # Pridge Button Effects
 
-18 dependency-free CSS button effects, originally designed by Sayeh, adapted here to the [Pridge color palette](../../COLORS.md) and made touch/tap friendly. Live demo: [demo.html](demo.html) (open it directly in a browser - it isn't part of the published site).
+18 dependency-free CSS button effects, originally designed by Sayeh, adapted here to the [Pridge color palette](../../COLORS.md) and made touch/tap friendly. Live demo: all 18 are shown on the published [design language page](https://sayehava.github.io/Pridge/design.html#buttons) (`docs/design.html`).
 
-Everything lives in [`buttons.css`](buttons.css): a shared `.fx-btn` base plus one class per effect (`.fx-reflection`, `.fx-neon`, …). Load `docs/assets/css/colors.css` first, then `buttons.css`, then use `class="fx-btn fx-<name>"` on a `<button>` or `<a>`.
+Everything lives in [`docs/assets/css/buttons.css`](../../docs/assets/css/buttons.css): a shared `.fx-btn` base plus one class per effect (`.fx-reflection`, `.fx-neon`, …). Load `colors.css` first, then `buttons.css`, then use `class="fx-btn fx-<name>"` on a `<button>` or `<a>`.
 
 ## The 18 effects
 

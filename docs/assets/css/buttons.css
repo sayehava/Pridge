@@ -1,8 +1,9 @@
 /*
   Pridge button effects.
   Shared .fx-btn base plus 18 hover/tap interaction styles. Colors are
-  read from docs/assets/css/colors.css, which must be loaded first.
-  See BUTTONS.md for what each effect does and when to reach for it.
+  read from colors.css, which must be loaded first. See design.html for
+  a live demo of all 18, and ../../design-language/buttons/BUTTONS.md
+  for notes on each one and which is used live on the site.
   Originally designed by Sayeh, adapted here to the Pridge palette and
   made touch/tap friendly (every :hover has a matching :active).
 */

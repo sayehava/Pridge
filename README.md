@@ -170,7 +170,7 @@ The [landing page](https://sayehava.github.io/Pridge/) is themed with Pridge Blu
 
 Full swatch previews, hex values and the CSS tokens behind them live in **[COLORS.md](COLORS.md)**, which also credits the [alijsh/persian-colors](https://github.com/alijsh/persian-colors/blob/master/persian-colors.css) and [color-hex.com/color-palette/372](https://www.color-hex.com/color-palette/372) references the palette draws on.
 
-Buttons, other reusable UI pieces and cross-project design notes (Pridge Client, Pridge Server) live in **[design-language/](design-language/README.md)**.
+See it all in one place on the **[design language page](https://sayehava.github.io/Pridge/design.html)** - colors, buttons, site elements, and how Pridge Client and Pridge Server fit in. Working notes behind it: **[design-language/](design-language/README.md)**.
 
 ---
 
