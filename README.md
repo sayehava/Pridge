@@ -239,6 +239,7 @@ sequenceDiagram
 | [**Pridge Server**](https://github.com/sayehava/Pridge-Server) | Receives, authenticates, queues and tracks print jobs | PHP + SQLite | GPL-3.0-or-later + additional terms | Active |
 | [**Pridge Client**](https://github.com/sayehava/Pridge-Client) | Connects remote queues to local printers | Python | GPL-3.0-or-later + additional terms | Active |
 | [**Pridge Dolibarr Endpoint**](https://github.com/sayehava/Pridge-Dolibarr-Endpoint) | Sends Dolibarr Receipt Printer and TakePOS ESC/POS output to Pridge without patching Dolibarr core | PHP | GPL-3.0-or-later + additional terms | Active |
+| [**Pridge WP Endpoint**](https://github.com/sayehava/Pridge-WP-Endpoint) | Bridges WordPress and WooCommerce to Pridge Server, with a public PHP API for other plugins | PHP | GPL-3.0-or-later + additional terms | Active |
 | **Pridge Index** | Central ecosystem directory and project landing page | Markdown | GPL-3.0-or-later + additional terms | You are here |
 | **Virtual Printer** | Operating-system printer that sends jobs to Pridge | Native platform components | To be announced | Planned |
 | **Integrations** | Connectors for shops, ERPs and business applications | Multiple | Per repository | Planned |
@@ -705,8 +706,9 @@ Pridge Ecosystem
 | [sayehava/Pridge-Client](https://github.com/sayehava/Pridge-Client) | Cross-platform desktop and headless bridge from Pridge servers to local printers |
 | [sayehava/Pridge](https://github.com/sayehava/Pridge) | Official ecosystem directory and landing page |
 | [sayehava/Pridge-Dolibarr-Endpoint](https://github.com/sayehava/Pridge-Dolibarr-Endpoint) | Dolibarr and TakePOS integration that forwards raw ESC/POS jobs through Pridge |
+| [sayehava/Pridge-WP-Endpoint](https://github.com/sayehava/Pridge-WP-Endpoint) | WordPress and WooCommerce integration that sends raw print payloads through Pridge |
 
-## First official integration
+## Official integrations
 
 ### 🧾 Pridge Dolibarr Endpoint
 
@@ -722,6 +724,20 @@ The first official Pridge integration connects Dolibarr's built-in **Receipt Pri
 - Includes a bundled test receiver and recent-print diagnostics
 
 **Repository:** https://github.com/sayehava/Pridge-Dolibarr-Endpoint
+
+### 🧩 Pridge WP Endpoint
+
+[![Open Integration](https://img.shields.io/badge/Open-Pridge_WP_Endpoint-f97316?style=for-the-badge&logo=github)](https://github.com/sayehava/Pridge-WP-Endpoint)
+
+A WordPress plugin that bridges WordPress and WooCommerce to Pridge Server virtual printers. It sends raw print payloads through the server's plugin API and provides a stable PHP entry point that other WordPress plugins can use.
+
+- Routes receipts, invoices, packing slips and shipping labels to designated printers
+- Hooks into WooCommerce order events
+- Optional support for Germanized and Shiptastic for WooCommerce
+- Exposes a public PHP API for third-party plugins to submit print jobs
+- Keeps an archive of successful and failed print attempts
+
+**Repository:** https://github.com/sayehava/Pridge-WP-Endpoint
 
 ---
 
@@ -740,8 +756,6 @@ The first official Pridge integration connects Dolibarr's built-in **Receipt Pri
 
 | Project | Status | Repository |
 |---|---|---|
-| WooCommerce integration | Planned | Coming later |
-| Dolibarr integration | Planned | Coming later |
 | POS integration kit | Planned | Coming later |
 | ERP integration kit | Planned | Coming later |
 
@@ -793,7 +807,7 @@ This roadmap describes the direction of the ecosystem, not a binding release sch
 
 ## Phase 3: Integrations
 
-- [ ] WooCommerce connector
+- [x] WooCommerce connector
 - [x] Dolibarr connector
 - [ ] Generic webhook module
 - [ ] POS examples
