@@ -1,0 +1,385 @@
+/*
+  Pridge button effects.
+  Shared .fx-btn base plus 18 hover/tap interaction styles. Colors are
+  read from docs/assets/css/colors.css, which must be loaded first.
+  See BUTTONS.md for what each effect does and when to reach for it.
+  Originally designed by Sayeh, adapted here to the Pridge palette and
+  made touch/tap friendly (every :hover has a matching :active).
+*/
+
+.fx-btn {
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+  min-width: 180px;
+  padding: 14px 22px;
+  border: 0;
+  border-radius: 13px;
+  color: var(--text);
+  font: inherit;
+  font-weight: 760;
+  letter-spacing: .01em;
+  cursor: pointer;
+  text-decoration: none;
+  transition: .28s ease;
+  overflow: hidden;
+  background: var(--panel-solid);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+.fx-btn:focus-visible {
+  outline: 3px solid var(--pridge-blue);
+  outline-offset: 4px;
+}
+.fx-btn .icon { font-size: 1.05em; }
+
+/* 01 Reflection sweep - a glossy highlight always sweeps across, hover just lifts the button. */
+.fx-reflection {
+  background: linear-gradient(135deg, var(--persian-blue-cobalt), var(--pridge-blue-deep));
+  box-shadow: 0 8px 28px var(--pridge-blue-deep-soft), inset 0 1px rgba(255, 255, 255, .3);
+}
+.fx-reflection::before {
+  content: "";
+  position: absolute;
+  inset: -70% auto -70% -42%;
+  width: 34%;
+  z-index: -1;
+  transform: rotate(18deg);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .75), transparent);
+  filter: blur(1px);
+  animation: fxReflection 3.1s ease-in-out infinite;
+}
+.fx-reflection:hover,
+.fx-reflection:active {
+  transform: translateY(-3px);
+  box-shadow: 0 13px 38px var(--pridge-blue-deep-soft), inset 0 1px rgba(255, 255, 255, .36);
+}
+@keyframes fxReflection { 0%, 35% { left: -45%; } 64%, 100% { left: 125%; } }
+
+/* 02 Neon pulse - idle glow border, solid fill on hover/tap. */
+.fx-neon {
+  background: var(--panel-solid);
+  border: 1px solid var(--pridge-blue);
+  box-shadow: 0 0 0 1px var(--pridge-blue-soft), 0 0 22px var(--pridge-blue-soft), inset 0 0 18px var(--pridge-blue-soft);
+  animation: fxNeonPulse 2s ease-in-out infinite;
+}
+.fx-neon:hover,
+.fx-neon:active {
+  background: var(--pridge-blue);
+  color: #04100f;
+  box-shadow: 0 0 15px var(--pridge-blue-soft), 0 0 42px var(--pridge-blue-soft);
+}
+@keyframes fxNeonPulse { 50% { box-shadow: 0 0 0 1px var(--pridge-blue-soft), 0 0 34px var(--pridge-blue-soft), inset 0 0 24px var(--pridge-blue-soft); } }
+
+/* 03 Gradient shift - a continuous color flow, hover/tap just scales up slightly. */
+.fx-shift {
+  background: linear-gradient(120deg, var(--persian-blue), var(--pridge-blue), var(--persian-green-vivid), var(--persian-blue));
+  background-size: 300% 300%;
+  animation: fxGradientShift 4.5s linear infinite;
+  color: #061019;
+}
+.fx-shift:hover,
+.fx-shift:active { transform: scale(1.045); }
+@keyframes fxGradientShift { to { background-position: 300% 0; } }
+
+/* 04 Border runner - a spinning conic-gradient ring around the button. */
+.fx-runner { background: var(--panel-solid); }
+.fx-runner::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  inset: -3px;
+  background: conic-gradient(from var(--fx-angle), transparent 0 72%, var(--amber), var(--pridge-blue), transparent 96%);
+  animation: fxSpinBorder 2.3s linear infinite;
+}
+.fx-runner::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 2px;
+  border-radius: 11px;
+  background: var(--panel-solid);
+}
+@property --fx-angle { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
+@keyframes fxSpinBorder { to { --fx-angle: 360deg; } }
+
+/* 05 Liquid fill - a wave rises to fill the button on hover/tap. */
+.fx-liquid { background: var(--panel-solid); border: 1px solid var(--pridge-blue-soft); }
+.fx-liquid::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: -15%;
+  right: -15%;
+  height: 220%;
+  top: 74%;
+  border-radius: 42%;
+  background: var(--persian-blue);
+  transition: top .55s cubic-bezier(.2, .8, .2, 1);
+  animation: fxLiquidWave 4s linear infinite;
+}
+.fx-liquid:hover::before,
+.fx-liquid:active::before { top: -55%; }
+@keyframes fxLiquidWave { to { transform: rotate(360deg); } }
+
+/* 06 Magnetic lift - the button rises with a glowing shadow underneath. */
+.fx-magnetic { background: linear-gradient(135deg, var(--panel-hover), var(--panel-solid)); border: 1px solid var(--line-strong); }
+.fx-magnetic::after {
+  content: "";
+  position: absolute;
+  inset: auto 20% -14px;
+  height: 18px;
+  background: var(--persian-blue);
+  filter: blur(17px);
+  opacity: .6;
+  z-index: -2;
+  transition: .3s;
+}
+.fx-magnetic:hover,
+.fx-magnetic:active {
+  transform: translateY(-7px) scale(1.03);
+  border-color: var(--pridge-blue-soft);
+  box-shadow: 0 18px 28px rgba(0, 0, 0, .4);
+}
+.fx-magnetic:hover::after,
+.fx-magnetic:active::after { opacity: 1; transform: translateY(7px) scaleX(1.2); }
+
+/* 07 Split reveal - two panels slide apart to reveal a solid color. */
+.fx-split { background: var(--amber); color: #1b1002; }
+.fx-split::before,
+.fx-split::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  width: 51%;
+  height: 100%;
+  background: var(--panel-solid);
+  transition: transform .45s cubic-bezier(.7, 0, .2, 1);
+}
+.fx-split::before { left: 0; }
+.fx-split::after { right: 0; }
+.fx-split:hover::before,
+.fx-split:active::before { transform: translateX(-102%); }
+.fx-split:hover::after,
+.fx-split:active::after { transform: translateX(102%); }
+
+/* 08 Scanline - an idle HUD-style scanning line with a subtle texture. */
+.fx-scan { background: linear-gradient(180deg, var(--panel-hover), var(--panel-solid)); border: 1px solid var(--pridge-blue-soft); }
+.fx-scan::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  top: -4px;
+  background: linear-gradient(90deg, transparent, var(--pridge-blue), transparent);
+  box-shadow: 0 0 14px var(--pridge-blue);
+  animation: fxScanline 2.2s ease-in-out infinite;
+}
+.fx-scan::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, transparent 0 4px, rgba(255, 255, 255, .025) 5px);
+  pointer-events: none;
+}
+@keyframes fxScanline { 50%, 100% { top: calc(100% + 2px); } }
+
+/* 09 Pixel glitch - a hover/tap-only distortion shake. */
+.fx-glitch { background: var(--panel-hover); border-left: 3px solid var(--pridge-blue); border-right: 3px solid var(--persian-red); }
+.fx-glitch:hover,
+.fx-glitch:active {
+  animation: fxGlitchMove .38s steps(2, end) infinite;
+  text-shadow: 3px 0 var(--persian-red), -3px 0 var(--pridge-blue);
+}
+@keyframes fxGlitchMove {
+  0% { transform: translate(0); }
+  25% { transform: translate(-2px, 1px); }
+  50% { transform: translate(2px, -1px); }
+  75% { transform: translate(-1px, -1px); }
+}
+
+/* 10 Ripple rings - a signal/broadcast pulse on hover/tap. */
+.fx-ripple { background: linear-gradient(135deg, var(--persian-blue), var(--pridge-blue-deep)); }
+.fx-ripple::before,
+.fx-ripple::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--pridge-blue);
+  border-radius: inherit;
+  opacity: 0;
+  z-index: -1;
+}
+.fx-ripple:hover::before,
+.fx-ripple:active::before { animation: fxRipple 1.3s ease-out infinite; }
+.fx-ripple:hover::after,
+.fx-ripple:active::after { animation: fxRipple 1.3s .42s ease-out infinite; }
+@keyframes fxRipple {
+  0% { opacity: .8; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.42, 1.9); }
+}
+
+/* 11 Data sparkles - a dotted grid that brightens and drifts on hover/tap. */
+.fx-stars { background: linear-gradient(135deg, var(--panel-hover), var(--panel-solid)); border: 1px solid var(--line-strong); }
+.fx-stars::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, #fff 0 1px, transparent 1.4px),
+    radial-gradient(circle, var(--pridge-blue) 0 1px, transparent 1.4px);
+  background-size: 19px 19px, 27px 27px;
+  background-position: 0 0, 8px 11px;
+  opacity: .18;
+  transition: .3s;
+}
+.fx-stars:hover::before,
+.fx-stars:active::before { opacity: .65; animation: fxStarsMove 1.1s linear infinite; }
+@keyframes fxStarsMove { to { background-position: 19px -19px, -19px 38px; } }
+
+/* 12 Corner brackets - a minimal frame-only style, brackets pull outward on hover/tap. */
+.fx-corners { background: transparent; border-radius: 4px; color: var(--pridge-blue); box-shadow: none; }
+.fx-corners::before,
+.fx-corners::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--pridge-blue);
+  transition: .3s;
+  clip-path: polygon(0 0, 25% 0, 25% 2px, 2px 2px, 2px 25%, 0 25%, 0 0, 75% 0, 100% 0, 100% 25%, 98% 25%, 98% 2px, 75% 2px);
+}
+.fx-corners::after { transform: rotate(180deg); }
+.fx-corners:hover,
+.fx-corners:active { color: var(--text); text-shadow: 0 0 12px var(--pridge-blue); }
+.fx-corners:hover::before,
+.fx-corners:active::before { transform: translate(-5px, -5px); }
+.fx-corners:hover::after,
+.fx-corners:active::after { transform: rotate(180deg) translate(-5px, -5px); }
+
+/* 13 Glass prism - glassmorphism with a slow rotating tint behind it. */
+.fx-glass {
+  background: linear-gradient(135deg, rgba(255, 255, 255, .16), rgba(255, 255, 255, .05));
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, .23);
+  box-shadow: inset 0 1px rgba(255, 255, 255, .2), 0 12px 30px rgba(0, 0, 0, .25);
+}
+.fx-glass::before {
+  content: "";
+  position: absolute;
+  inset: -80%;
+  z-index: -1;
+  background: conic-gradient(from 180deg, transparent, var(--persian-blue), transparent, var(--amber), transparent);
+  opacity: .16;
+  animation: fxGlassSpin 6s linear infinite;
+}
+.fx-glass:hover,
+.fx-glass:active { border-color: rgba(255, 255, 255, .45); transform: translateY(-2px); }
+@keyframes fxGlassSpin { to { transform: rotate(360deg); } }
+
+/* 14 Energy charge - a left-to-right power fill on hover/tap. */
+.fx-charge { background: var(--panel-solid); border: 1px solid var(--persian-green-soft); }
+.fx-charge::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(90deg, var(--persian-green-vivid), var(--pridge-blue));
+  transition: width .45s ease;
+  z-index: -1;
+}
+.fx-charge:hover,
+.fx-charge:active { color: #03150f; }
+.fx-charge:hover::before,
+.fx-charge:active::before { width: 100%; }
+.fx-charge::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: 9px;
+  opacity: 0;
+  transition: .25s;
+}
+.fx-charge:hover::after,
+.fx-charge:active::after { opacity: 1; }
+
+/* 15 Text swap - the label swaps to a secondary action on hover/tap. */
+.fx-swap { background: linear-gradient(135deg, var(--persian-blue-navy), var(--panel-solid)); }
+.fx-swap .front,
+.fx-swap .back { transition: .35s cubic-bezier(.2, .8, .2, 1); }
+.fx-swap .back { position: absolute; transform: translateY(180%); color: var(--pridge-blue); }
+.fx-swap:hover .front,
+.fx-swap:active .front { transform: translateY(-180%); }
+.fx-swap:hover .back,
+.fx-swap:active .back { transform: translateY(0); }
+
+/* 16 Status orb - a live-connection dot built into the button. */
+.fx-orb { background: var(--panel-hover); padding-left: 56px; border: 1px solid var(--line-strong); }
+.fx-orb::before {
+  content: "";
+  position: absolute;
+  left: 19px;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: var(--persian-green-vivid);
+  box-shadow: 0 0 0 0 var(--persian-green-soft);
+  animation: fxOrbPulse 1.8s infinite;
+}
+.fx-orb:hover::before,
+.fx-orb:active::before { background: var(--pridge-blue); }
+@keyframes fxOrbPulse {
+  70% { box-shadow: 0 0 0 12px rgba(0, 166, 147, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 166, 147, 0); }
+}
+
+/* 17 Arrow launch - the arrow slides forward with a burst behind it. */
+.fx-arrow { background: linear-gradient(135deg, var(--amber), var(--amber-deep)); color: #221305; padding-right: 52px; }
+.fx-arrow::after { content: "→"; position: absolute; right: 21px; font-size: 1.35rem; transition: .35s; }
+.fx-arrow:hover::after,
+.fx-arrow:active::after { transform: translateX(8px); }
+.fx-arrow::before {
+  content: "";
+  position: absolute;
+  right: 23px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .25);
+  transform: scale(0);
+  transition: .35s;
+}
+.fx-arrow:hover::before,
+.fx-arrow:active::before { transform: scale(1.65); opacity: 0; }
+
+/* 18 Holographic - a shifting multi-tone sheen with a 3D tilt on hover/tap. */
+.fx-holo {
+  background: linear-gradient(110deg, var(--persian-blue-navy), var(--persian-green-deep), var(--amber-deep), var(--persian-blue-navy));
+  background-size: 260% 100%;
+  border: 1px solid rgba(255, 255, 255, .25);
+  animation: fxHolo 4s linear infinite;
+}
+.fx-holo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(115deg, transparent 0 8px, rgba(255, 255, 255, .07) 9px 10px);
+  mix-blend-mode: screen;
+}
+.fx-holo:hover,
+.fx-holo:active { filter: saturate(1.45) brightness(1.15); transform: perspective(500px) rotateX(-5deg) rotateY(7deg); }
+@keyframes fxHolo { to { background-position: 260% 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .fx-btn, .fx-btn::before, .fx-btn::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+}
