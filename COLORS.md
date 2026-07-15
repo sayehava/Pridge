@@ -28,7 +28,9 @@ Additional tonal shades pulled from the same Persian color families, used for gr
 |---|---|---|---|
 | ![#2387FF](https://img.shields.io/badge/-2387FF?style=flat-square&color=2387FF) | Pridge Blue Deep | `--pridge-blue-deep` | `#2387FF` |
 | ![#0067A5](https://img.shields.io/badge/-0067A5?style=flat-square&color=0067A5) | Persian Blue Deep | `--persian-blue-deep` | `#0067A5` |
-| ![#BCD4E6](https://img.shields.io/badge/-BCD4E6?style=flat-square&color=BCD4E6) | Persian Blue Pale | `--persian-blue-pale` | `#BCD4E6` |
+| ![#0047AB](https://img.shields.io/badge/-0047AB?style=flat-square&color=0047AB) | Persian Blue Cobalt | `--persian-blue-cobalt` | `#0047AB` |
+| ![#BCD4E6](https://img.shields.io/badge/-BCD4E6?style=flat-square&color=BCD4E6) | Persian Blue Sky | `--persian-blue-sky` | `#BCD4E6` |
+| ![#91A3B0](https://img.shields.io/badge/-91A3B0?style=flat-square&color=91A3B0) | Persian Blue Muted | `--persian-blue-muted` | `#91A3B0` |
 | ![#317873](https://img.shields.io/badge/-317873?style=flat-square&color=317873) | Persian Green Deep | `--persian-green-deep` | `#317873` |
 | ![#F38400](https://img.shields.io/badge/-F38400?style=flat-square&color=F38400) | Amber Deep | `--amber-deep` | `#F38400` |
 
@@ -49,7 +51,7 @@ The site stays dark-mode only; these neutrals never change with the brand palett
 
 This palette is inspired by two references for classic "Persian color" naming:
 
-- [alijsh/persian-colors](https://github.com/alijsh/persian-colors/blob/master/persian-colors.css) — Persian Blue, Persian Green and Persian Red were taken from this scale's `vivid` / `strong` / `brilliant-bluish` entries.
+- [alijsh/persian-colors](https://github.com/alijsh/persian-colors/blob/master/persian-colors.css) — Persian Blue, Persian Green and Persian Red were taken from this scale's `vivid` / `strong` / `cobalt` / `brilliant-bluish` entries.
 - [color-hex.com/color-palette/372](https://www.color-hex.com/color-palette/372) — additional Persian palette reference.
 
 ## File

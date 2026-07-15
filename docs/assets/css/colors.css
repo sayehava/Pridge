@@ -28,10 +28,12 @@
   --pridge-blue: #22d3ee;
   --pridge-blue-deep: #2387ff;
 
-  /* Persian Blue - persian-blue-vivid / persian-blue-strong */
+  /* Persian Blue - a fuller tonal range, from deep cobalt to pale sky */
   --persian-blue: #1c39bb;
   --persian-blue-deep: #0067a5;
-  --persian-blue-pale: #bcd4e6;
+  --persian-blue-cobalt: #0047ab;
+  --persian-blue-sky: #bcd4e6;
+  --persian-blue-muted: #91a3b0;
 
   /* Persian Red - persian-red-vivid */
   --persian-red: #cc3333;

@@ -115,11 +115,6 @@
       50% { opacity: 1; transform: scale(1.05); }
     }
 
-    @keyframes shimmer {
-      from { transform: translateX(-130%); }
-      to { transform: translateX(230%); }
-    }
-
     @keyframes packet {
       0% { left: 8%; opacity: 0; transform: scale(.55); }
       10% { opacity: 1; }
@@ -275,9 +270,13 @@
 
     .menu-button { display: none; }
 
+    @property --border-angle {
+      syntax: '<angle>';
+      inherits: false;
+      initial-value: 0deg;
+    }
     .button {
       position: relative;
-      overflow: hidden;
       min-height: 43px;
       display: inline-flex;
       align-items: center;
@@ -286,28 +285,37 @@
       padding: 10px 17px;
       border: 0;
       border-radius: 11px;
-      background: linear-gradient(120deg, var(--blue), var(--persian-blue));
-      color: #061018;
+      background: linear-gradient(120deg, var(--blue), var(--persian-blue-cobalt), var(--persian-blue));
+      color: var(--text);
       cursor: pointer;
       font-weight: 850;
       text-decoration: none;
       transition: transform .14s ease, filter .2s ease, box-shadow .2s ease;
     }
+    /* Rotating conic-gradient ring stands in for the old shine sweep. */
     .button::after {
       content: "";
       position: absolute;
-      inset: -30%;
-      width: 40%;
-      transform: translateX(-130%);
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,.38), transparent);
-      rotate: 15deg;
+      inset: -3px;
+      z-index: -1;
+      padding: 3px;
+      border-radius: inherit;
+      background: conic-gradient(from var(--border-angle), var(--pridge-blue), var(--amber), var(--persian-blue), var(--pridge-blue));
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: opacity .25s ease;
     }
     .button:hover {
       transform: translateY(-2px);
       filter: brightness(1.07);
       box-shadow: 0 12px 34px -10px rgba(34, 211, 238, .65);
     }
-    .button:hover::after { animation: shimmer .75s ease; }
+    .button:hover::after { opacity: 1; animation: borderAngle 1.8s linear infinite; }
+    @keyframes borderAngle {
+      to { --border-angle: 360deg; }
+    }
     .button:active { transform: translateY(0); }
     .button:focus-visible,
     .icon-button:focus-visible,
@@ -371,7 +379,7 @@
       align-items: center;
       gap: 11px;
       margin-bottom: 20px;
-      color: var(--persian-blue-pale);
+      color: var(--persian-blue-sky);
       font-size: 12px;
       font-weight: 800;
       letter-spacing: .08em;
@@ -408,7 +416,7 @@
     .gradient-title {
       display: inline-block;
       color: transparent;
-      background: linear-gradient(100deg, #ffffff 0%, #8ddcff 32%, #65a7ff 52%, #ffb33b 81%, #ff7b17 100%);
+      background: linear-gradient(100deg, #ffffff 0%, var(--persian-blue-sky) 26%, var(--persian-blue-cobalt) 42%, var(--persian-blue) 58%, var(--amber) 81%, var(--amber-deep) 100%);
       -webkit-background-clip: text;
       background-clip: text;
     }
