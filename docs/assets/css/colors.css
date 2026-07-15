@@ -1,0 +1,71 @@
+/*
+  Pridge color palette.
+
+  Every color pridge.css draws on lives here. Re-theme the whole site by
+  editing the tokens below; component styles never hardcode a hex value.
+
+  Brand family: Pridge Blue (existing brand accent) plus a curated
+  Persian jewel-tone scale (Persian Blue, Persian Red, Persian Green,
+  Amber), inspired by:
+    https://github.com/alijsh/persian-colors/blob/master/persian-colors.css
+    https://www.color-hex.com/color-palette/372
+*/
+:root {
+  /* Neutrals (dark theme) */
+  --bg: #05060c;
+  --bg-2: #090b14;
+  --panel: rgba(19, 22, 36, .67);
+  --panel-solid: #111420;
+  --panel-hover: rgba(31, 35, 54, .83);
+  --line: rgba(158, 170, 219, .16);
+  --line-strong: rgba(158, 170, 219, .32);
+  --text: #eef1fb;
+  --muted: #98a2c6;
+  --muted-2: #697394;
+  --shadow: 0 26px 80px rgba(0, 0, 0, .42);
+
+  /* Pridge Blue - the existing brand accent, two working shades */
+  --pridge-blue: #22d3ee;
+  --pridge-blue-deep: #2387ff;
+
+  /* Persian Blue - persian-blue-vivid / persian-blue-strong */
+  --persian-blue: #1c39bb;
+  --persian-blue-deep: #0067a5;
+  --persian-blue-pale: #bcd4e6;
+
+  /* Persian Red - persian-red-vivid */
+  --persian-red: #cc3333;
+
+  /* Persian Green - persian-green-brilliant-bluish / moderate-bluish */
+  --persian-green: #00a693;
+  --persian-green-deep: #317873;
+
+  /* Amber */
+  --amber: #ffb300;
+  --amber-deep: #f38400;
+
+  /* Soft translucent tints, used for badges/glows/hover fills */
+  --pridge-blue-soft: rgba(34, 211, 238, .13);
+  --pridge-blue-deep-soft: rgba(35, 135, 255, .13);
+  --persian-blue-soft: rgba(28, 57, 187, .18);
+  --persian-red-soft: rgba(204, 51, 51, .13);
+  --persian-green-soft: rgba(0, 166, 147, .14);
+  --amber-soft: rgba(255, 179, 0, .14);
+
+  /*
+    Semantic aliases consumed throughout pridge.css.
+    Re-point these to swap where a brand color is used
+    without touching component styles.
+  */
+  --blue: var(--pridge-blue);
+  --blue-2: var(--pridge-blue-deep);
+  --green: var(--persian-green);
+  --orange: var(--amber);
+  --yellow: var(--amber);
+  --red: var(--persian-red);
+
+  --blue-soft: var(--pridge-blue-soft);
+  --orange-soft: var(--amber-soft);
+  --green-soft: var(--persian-green-soft);
+  --red-soft: var(--persian-red-soft);
+}

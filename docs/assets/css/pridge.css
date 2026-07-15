@@ -1,27 +1,5 @@
 :root {
-      --bg: #05060c;
-      --bg-2: #090b14;
-      --panel: rgba(19, 22, 36, .67);
-      --panel-solid: #111420;
-      --panel-hover: rgba(31, 35, 54, .83);
-      --line: rgba(158, 170, 219, .16);
-      --line-strong: rgba(158, 170, 219, .32);
-      --text: #eef1fb;
-      --muted: #98a2c6;
-      --muted-2: #697394;
-      --blue: #22d3ee;
-      --blue-2: #2387ff;
-      --purple: #a855f7;
-      --pink: #ec4899;
-      --orange: #ff9418;
-      --green: #34e2a0;
-      --yellow: #fbbf24;
-      --red: #ff5d7a;
-      --blue-soft: rgba(34, 211, 238, .13);
-      --orange-soft: rgba(255, 148, 24, .13);
-      --green-soft: rgba(52, 226, 160, .13);
-      --red-soft: rgba(255, 93, 122, .13);
-      --shadow: 0 26px 80px rgba(0, 0, 0, .42);
+      /* Color tokens now live in colors.css, loaded before this file. */
       --radius-xl: 28px;
       --radius-lg: 20px;
       --radius-md: 14px;
@@ -43,9 +21,9 @@
       min-height: 100vh;
       overflow-x: hidden;
       background:
-        radial-gradient(820px circle at 8% -8%, rgba(139, 92, 246, .25), transparent 62%),
+        radial-gradient(820px circle at 8% -8%, rgba(28, 57, 187, .25), transparent 62%),
         radial-gradient(720px circle at 96% 4%, rgba(34, 211, 238, .22), transparent 58%),
-        radial-gradient(900px circle at 50% 105%, rgba(236, 72, 153, .13), transparent 62%),
+        radial-gradient(900px circle at 50% 105%, rgba(204, 51, 51, .13), transparent 62%),
         var(--bg);
       color: var(--text);
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -65,7 +43,7 @@
     ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb {
       border-radius: 999px;
-      background: linear-gradient(180deg, var(--blue), var(--purple));
+      background: linear-gradient(180deg, var(--blue), var(--persian-blue));
     }
 
     a { color: inherit; }
@@ -96,16 +74,17 @@
       opacity: .46;
     }
 
+    /* Diagonal lattice nods to Persian girih tilework instead of a plain graph-paper grid. */
     .grid-overlay {
       position: fixed;
       inset: 0;
       z-index: -3;
       pointer-events: none;
-      opacity: .20;
+      opacity: .22;
       background-image:
-        linear-gradient(rgba(255,255,255,.022) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.022) 1px, transparent 1px);
-      background-size: 42px 42px;
+        linear-gradient(45deg, rgba(28,57,187,.06) 1px, transparent 1px),
+        linear-gradient(-45deg, rgba(28,57,187,.06) 1px, transparent 1px);
+      background-size: 46px 46px;
       mask-image: linear-gradient(to bottom, #000, transparent 88%);
     }
 
@@ -118,7 +97,7 @@
       opacity: .2;
       animation: orbFloat 18s ease-in-out infinite alternate;
     }
-    .orb-a { width: 340px; height: 340px; left: -150px; top: 28%; background: var(--purple); }
+    .orb-a { width: 340px; height: 340px; left: -150px; top: 28%; background: var(--persian-blue); }
     .orb-b { width: 280px; height: 280px; right: -120px; top: 44%; background: var(--blue); animation-delay: -7s; }
     .orb-c { width: 260px; height: 260px; left: 42%; bottom: -170px; background: var(--orange); animation-delay: -12s; }
 
@@ -214,7 +193,7 @@
       border-radius: 13px;
       background:
         radial-gradient(circle at 35% 25%, rgba(255,255,255,.23), transparent 34%),
-        linear-gradient(145deg, rgba(34, 211, 238, .15), rgba(168, 85, 247, .13));
+        linear-gradient(145deg, rgba(34, 211, 238, .15), rgba(28, 57, 187, .13));
       box-shadow: 0 0 28px rgba(34, 211, 238, .12);
     }
     .brand-icon img {
@@ -307,7 +286,7 @@
       padding: 10px 17px;
       border: 0;
       border-radius: 11px;
-      background: linear-gradient(120deg, var(--blue), var(--purple));
+      background: linear-gradient(120deg, var(--blue), var(--persian-blue));
       color: #061018;
       cursor: pointer;
       font-weight: 850;
@@ -385,29 +364,37 @@
       gap: 52px;
     }
 
-    .eyebrow {
+    /* Persian eight-point star (two overlaid squares) stands in for a generic pill badge. */
+    .motif-tag {
       width: fit-content;
       display: inline-flex;
       align-items: center;
-      gap: 9px;
-      margin-bottom: 19px;
-      padding: 7px 11px;
-      border: 1px solid rgba(52, 226, 160, .28);
-      border-radius: 999px;
-      background: rgba(52, 226, 160, .07);
-      color: #baf9df;
+      gap: 11px;
+      margin-bottom: 20px;
+      color: var(--persian-blue-pale);
       font-size: 12px;
       font-weight: 800;
       letter-spacing: .08em;
       text-transform: uppercase;
     }
-    .eyebrow-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--green);
-      box-shadow: 0 0 14px var(--green);
-      animation: pulse 1.8s ease-in-out infinite;
+    .motif-star {
+      position: relative;
+      width: 13px;
+      height: 13px;
+      flex: none;
+      animation: motifGlow 2.6s ease-in-out infinite;
+    }
+    .motif-star::before,
+    .motif-star::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--persian-blue);
+    }
+    .motif-star::after { transform: rotate(45deg); }
+    @keyframes motifGlow {
+      0%, 100% { filter: drop-shadow(0 0 3px rgba(255,179,0,.4)); }
+      50% { filter: drop-shadow(0 0 8px rgba(255,179,0,.75)); }
     }
 
     h1, h2, h3, p { margin-top: 0; }
@@ -538,7 +525,7 @@
       bottom: 42px;
       z-index: 2;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(34,211,238,.6), rgba(168,85,247,.7), rgba(255,148,24,.7), transparent);
+      background: linear-gradient(90deg, transparent, rgba(34,211,238,.6), rgba(0,166,147,.7), rgba(255,179,0,.7), transparent);
     }
     .packet-line i {
       position: absolute;
@@ -613,6 +600,16 @@
       letter-spacing: .12em;
       text-transform: uppercase;
     }
+    .kicker::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      margin-right: 8px;
+      background: var(--amber);
+      transform: rotate(45deg);
+      vertical-align: middle;
+    }
     h2 {
       margin-bottom: 0;
       font-size: clamp(34px, 4.7vw, 58px);
@@ -679,7 +676,7 @@
       filter: blur(52px);
       opacity: .12;
     }
-    .arch-card:nth-child(2) .arch-glow { background: var(--purple); }
+    .arch-card:nth-child(2) .arch-glow { background: var(--persian-blue); }
     .arch-card:nth-child(3) .arch-glow { background: var(--orange); }
     .arch-card:nth-child(4) .arch-glow { background: var(--green); }
 
