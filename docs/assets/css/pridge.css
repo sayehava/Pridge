@@ -312,7 +312,7 @@
     .button:active::after { animation: buttonRipple 1.3s .42s ease-out infinite; }
     @keyframes buttonRipple {
       0% { opacity: .8; transform: scale(1); }
-      100% { opacity: 0; transform: scale(1.4, 1.75); }
+      100% { opacity: 0; transform: scale(1.12, 1.22); }
     }
     .button:active { transform: translateY(0); }
     .button:focus-visible,
