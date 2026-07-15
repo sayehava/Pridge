@@ -166,7 +166,7 @@ The ecosystem is built in public so users can inspect it, extend it, self-host i
 
 # 🎨 Color palette
 
-The [landing page](https://sayehava.github.io/Pridge/) is themed with Pridge Blue and a curated Persian jewel-tone palette — Persian Blue, Persian Red, Persian Green and Amber.
+The [landing page](https://sayehava.github.io/Pridge/) is themed with Pridge Blue and a curated Persian jewel-tone palette! Persian Blue, Persian Red, Persian Green and Amber.
 
 Full swatch previews, hex values and the CSS tokens behind them live in **[COLORS.md](COLORS.md)**, which also credits the [alijsh/persian-colors](https://github.com/alijsh/persian-colors/blob/master/persian-colors.css) and [color-hex.com/color-palette/372](https://www.color-hex.com/color-palette/372) references the palette draws on.
 
