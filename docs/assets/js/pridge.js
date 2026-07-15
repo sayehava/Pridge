@@ -407,14 +407,6 @@
       });
       $("#tryRoute").addEventListener("change", buildRequest);
 
-      // Effects toggle
-      $("#effectsToggle").addEventListener("click", () => {
-        const off = document.body.classList.toggle("effects-off");
-        localStorage.setItem("pridge-effects", off ? "off" : "on");
-        toast(off ? "Visual effects paused" : "Visual effects enabled");
-      });
-      if (localStorage.getItem("pridge-effects") === "off") document.body.classList.add("effects-off");
-
       // Hero pointer parallax
       const heroVisual = $("#heroVisual");
       const heroFrame = $("#heroFrame");

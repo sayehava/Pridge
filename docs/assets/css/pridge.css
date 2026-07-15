@@ -32,10 +32,6 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    body.effects-off .orb,
-    body.effects-off #network,
-    body.effects-off .grid-overlay { display: none; }
-
     body.modal-open { overflow: hidden; }
 
     ::selection { background: rgba(34, 211, 238, .38); color: #fff; }
