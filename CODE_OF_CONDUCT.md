@@ -2,7 +2,7 @@
 
 ## Our pledge
 
-We want the Pridge community — issues, pull requests, discussions and any other project space — to be welcoming and harassment-free for everyone, regardless of experience level, background, identity or the hardware they're trying to get printing.
+We want the Pridge community (issues, pull requests, discussions and any other project space) to be welcoming and harassment free for everyone, regardless of experience level, background, identity or the hardware they're trying to get printing.
 
 ## Expected behavior
 
