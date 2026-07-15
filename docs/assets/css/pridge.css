@@ -99,7 +99,7 @@
     }
     .orb-a { width: 340px; height: 340px; left: -150px; top: 28%; background: var(--persian-blue); }
     .orb-b { width: 280px; height: 280px; right: -120px; top: 44%; background: var(--blue); animation-delay: -7s; }
-    .orb-c { width: 260px; height: 260px; left: 42%; bottom: -170px; background: var(--orange); animation-delay: -12s; }
+    .orb-c { width: 260px; height: 260px; left: 42%; bottom: -170px; background: var(--persian-teal); animation-delay: -12s; }
 
     @keyframes orbFloat {
       to { transform: translate3d(40px, -35px, 0) scale(1.12); }
@@ -125,10 +125,6 @@
     @keyframes floaty {
       0%, 100% { transform: translateY(0) rotate(-1deg); }
       50% { transform: translateY(-10px) rotate(1deg); }
-    }
-
-    @keyframes spin {
-      to { transform: rotate(1turn); }
     }
 
     .reveal {
@@ -270,13 +266,10 @@
 
     .menu-button { display: none; }
 
-    @property --border-angle {
-      syntax: '<angle>';
-      inherits: false;
-      initial-value: 0deg;
-    }
     .button {
       position: relative;
+      z-index: 0;
+      overflow: hidden;
       min-height: 43px;
       display: inline-flex;
       align-items: center;
@@ -292,30 +285,27 @@
       text-decoration: none;
       transition: transform .14s ease, filter .2s ease, box-shadow .2s ease;
     }
-    /* Rotating conic-gradient ring stands in for the old shine sweep. */
+    /* A dot at the leading edge expands to wash the button in a second color on hover. */
     .button::after {
       content: "";
       position: absolute;
-      inset: -3px;
       z-index: -1;
-      padding: 3px;
-      border-radius: inherit;
-      background: conic-gradient(from var(--border-angle), var(--pridge-blue), var(--amber), var(--persian-blue), var(--pridge-blue));
-      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      opacity: 0;
-      transition: opacity .25s ease;
+      left: 16px;
+      top: 50%;
+      width: 10px;
+      height: 10px;
+      margin-top: -5px;
+      border-radius: 50%;
+      background: var(--amber-vivid);
+      transform: scale(0);
+      transition: transform .5s cubic-bezier(.65, 0, .35, 1);
     }
     .button:hover {
       transform: translateY(-2px);
       filter: brightness(1.07);
       box-shadow: 0 12px 34px -10px rgba(34, 211, 238, .65);
     }
-    .button:hover::after { opacity: 1; animation: borderAngle 1.8s linear infinite; }
-    @keyframes borderAngle {
-      to { --border-angle: 360deg; }
-    }
+    .button:hover::after { transform: scale(24); }
     .button:active { transform: translateY(0); }
     .button:focus-visible,
     .icon-button:focus-visible,
@@ -338,6 +328,7 @@
       background: linear-gradient(120deg, #ffbf3c, var(--orange));
       color: #1b0d00;
     }
+    .button-orange::after { background: var(--persian-blue-cobalt); }
 
     .button-small {
       min-height: 36px;
@@ -684,9 +675,9 @@
       filter: blur(52px);
       opacity: .12;
     }
-    .arch-card:nth-child(2) .arch-glow { background: var(--persian-blue); }
-    .arch-card:nth-child(3) .arch-glow { background: var(--orange); }
-    .arch-card:nth-child(4) .arch-glow { background: var(--green); }
+    .arch-card:nth-child(2) .arch-glow { background: var(--persian-blue-navy); }
+    .arch-card:nth-child(3) .arch-glow { background: var(--amber-gold); }
+    .arch-card:nth-child(4) .arch-glow { background: var(--persian-green-vivid); }
 
     .repo-grid {
       display: grid;
