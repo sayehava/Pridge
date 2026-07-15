@@ -96,6 +96,7 @@
         <h2>Buttons</h2>
         <p class="lead">18 hover/tap-friendly CSS button effects. <strong style="color:var(--text)">Ripple Rings</strong> is the one used live on this site's own buttons. Notes on each: <a href="https://github.com/sayehava/Pridge/blob/main/design-language/buttons/BUTTONS.md" target="_blank" rel="noopener" style="color:var(--pridge-blue)">BUTTONS.md</a>.</p>
         <div class="dl-grid">
+          <div class="dl-card glass"><div class="dl-preview"><button class="button">Get started</button></div><h3>Live site button</h3><p>.button &mdash; Ripple Rings, as used in the hero</p></div>
           <div class="dl-card glass"><div class="dl-preview"><button class="fx-btn fx-reflection"><span class="icon">&#8599;</span>Get started</button></div><h3>Reflection Sweep</h3><p>Automatic glossy reflection</p></div>
           <div class="dl-card glass"><div class="dl-preview"><button class="fx-btn fx-neon">Connect client</button></div><h3>Neon Pulse</h3><p>Idle glow + solid hover</p></div>
           <div class="dl-card glass"><div class="dl-preview"><button class="fx-btn fx-shift">Explore API</button></div><h3>Gradient Shift</h3><p>Continuous color flow</p></div>
@@ -166,6 +167,33 @@
           <div class="dl-swatch"><div class="dl-swatch-color" style="background:var(--client-obsidian)"></div><div class="dl-swatch-label"><strong>Obsidian</strong><small>--client-obsidian</small></div></div>
           <div class="dl-swatch"><div class="dl-swatch-color" style="background:var(--client-jet)"></div><div class="dl-swatch-label"><strong>Jet</strong><small>--client-jet</small></div></div>
         </div>
+
+        <h3 style="margin:28px 0 14px;font-size:16px">Design elements, matched to our palette</h3>
+        <div class="dl-grid">
+          <div class="dl-card glass">
+            <div class="dl-preview" style="justify-content:flex-start">
+              <div style="width:100%;padding:10px 12px;border:1px solid var(--line-strong);border-radius:10px;background:var(--panel-solid)">
+                <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-bottom:4px">Connection</div>
+                <div style="font-size:13px;font-weight:600;display:flex;align-items:center;gap:7px">
+                  <span style="width:8px;height:8px;border-radius:50%;background:var(--persian-green);box-shadow:0 0 8px var(--persian-green-soft);display:inline-block"></span>
+                  Online
+                </div>
+              </div>
+            </div>
+            <h3>Status card</h3><p>Client's compact status widget, re-skinned</p>
+          </div>
+          <div class="dl-card glass">
+            <div class="dl-preview" style="justify-content:flex-start">
+              <div style="width:100%;display:grid;gap:6px">
+                <div style="display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:8px;background:var(--pridge-blue-soft);color:var(--text);font-size:13px;font-weight:700">Servers</div>
+                <div style="display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:8px;color:var(--muted);font-size:13px;font-weight:700">Printers</div>
+                <div style="display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:8px;color:var(--muted);font-size:13px;font-weight:700">Logs</div>
+              </div>
+            </div>
+            <h3>Sidebar nav item</h3><p>Client's compact sidebar list, re-skinned</p>
+          </div>
+        </div>
+
         <a class="dl-repo-link" href="https://github.com/sayehava/Pridge-Client" target="_blank" rel="noopener">Pridge Client on GitHub &#8599;</a>
       </div>
     </section>
@@ -183,6 +211,30 @@
           <div class="dl-swatch"><div class="dl-swatch-color" style="background:#fbbf24"></div><div class="dl-swatch-label"><strong>Warning</strong><small>current Server admin UI</small></div></div>
         </div>
         <div class="dl-note">Server's admin UI still uses the site's pre-redesign palette. It's scheduled to be brought in line with the Persian palette above as a separate task, so it isn't cross-referenced as a live token set yet.</div>
+
+        <h3 style="margin:28px 0 14px;font-size:16px">Design elements, matched to our palette</h3>
+        <div class="dl-grid">
+          <div class="dl-card glass">
+            <div class="dl-preview" style="justify-content:flex-start">
+              <div style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.02);font-size:13px">
+                <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--muted)">#1248</span>
+                <span>receipts-front-desk</span>
+                <span class="life printed" style="margin:0">printed</span>
+              </div>
+            </div>
+            <h3>Queue row</h3><p>Server's admin queue-table row, re-skinned</p>
+          </div>
+          <div class="dl-card glass">
+            <div class="dl-preview" style="justify-content:flex-start">
+              <div style="width:100%;display:flex;align-items:center;gap:10px;padding:10px 12px;border-bottom:1px solid var(--line);background:rgba(6,7,13,.72)">
+                <span class="brand-icon" style="width:26px;height:26px;border-radius:8px"></span>
+                <strong style="font-size:13px"><span class="word-pri">Pri</span><span class="word-dge">dge</span> Admin</strong>
+              </div>
+            </div>
+            <h3>Admin topbar</h3><p>Server's sticky blurred topbar, re-skinned</p>
+          </div>
+        </div>
+
         <a class="dl-repo-link" href="https://github.com/sayehava/Pridge-Server" target="_blank" rel="noopener">Pridge Server on GitHub &#8599;</a>
       </div>
     </section>
