@@ -273,6 +273,8 @@ It is written in plain PHP and uses SQLite for storage. It is designed to run on
 - Track client heartbeat
 - Support password recovery
 - Protect administration with login throttling
+- Warn (without ever blocking) when a connected client or module is on an incompatible major version
+- Check GitHub for new releases and update itself from the admin panel, with an automatic backup taken first and one-click restore
 
 ## Server requirements
 
@@ -322,6 +324,8 @@ The current implementation is written in Python. It provides a graphical configu
 - Store tokens securely where platform support is available
 - Continue operating in background mode
 - Run without requiring the end user to install Python when using packaged releases
+- Warn (without ever blocking) when the connected server is on an incompatible major version
+- Export the current run log for support or troubleshooting
 
 ## Multiple-server support
 
@@ -397,6 +401,9 @@ https://github.com/sayehava/Pridge-Client
 | Linux support | Browser/server side | ✅ |
 | Packaged standalone builds | N/A | ✅ |
 | Language-neutral protocol | ✅ | ✅ |
+| Version-compatibility warnings | ✅ | ✅ |
+| Self-update from GitHub releases with backup and restore | ✅ | N/A |
+| Export run log for support/troubleshooting | N/A | ✅ |
 
 ---
 
@@ -466,12 +473,13 @@ Applications submit jobs using an endpoint token.
 POST /api/plugin/jobs
 Authorization: Bearer ENDPOINT_TOKEN
 Content-Type: application/octet-stream
-X-PrintBridge-Metadata: {"source":"woocommerce","order_id":"1001"}
+X-Pridge-Metadata: {"source":"woocommerce","order_id":"1001"}
+X-Pridge-Module-Version: 1.0.0
 
 RAW_PRINT_PAYLOAD
 ```
 
-The request body is stored as the original print payload.
+The request body is stored as the original print payload. `X-Pridge-Module-Version` is optional; the response always includes the server's own `server_version`, plus an advisory `compatibility_warning` if the module's and server's major versions differ.
 
 ## Client authentication
 
@@ -480,11 +488,12 @@ POST /api/client/auth
 Content-Type: application/json
 
 {
-  "token": "CLIENT_TOKEN"
+  "token": "CLIENT_TOKEN",
+  "client_version": "1.3.0"
 }
 ```
 
-Successful authentication returns a temporary bearer token for subsequent client operations.
+Successful authentication returns a temporary bearer token for subsequent client operations. `client_version` is optional and works the same way as `X-Pridge-Module-Version` above — advisory only, never blocks authentication.
 
 ## Important client routes
 
@@ -800,8 +809,8 @@ This roadmap describes the direction of the ecosystem, not a binding release sch
 - [ ] Improved diagnostics
 - [ ] Guided first-run setup
 - [ ] Easier printer test jobs
-- [ ] Better client logs
-- [ ] Automatic update strategy
+- [x] Better client logs
+- [x] Automatic update strategy
 - [ ] Expanded platform testing
 - [ ] Additional documentation and examples
 
